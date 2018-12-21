@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -34,7 +35,7 @@ namespace TourTeamProject
 
         DataTable DBconnection(string[] arr)
         {
-            string conStr = "Data Source=localhost;Initial Catalog=Northwind;Integrated Security=True";
+            string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString;
 
             using (SqlConnection con = new SqlConnection(conStr))
             {
