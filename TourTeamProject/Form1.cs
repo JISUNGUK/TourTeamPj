@@ -82,5 +82,17 @@ namespace TourTeamProject
             FrmMySchdual from = new FrmMySchdual();
             from.ShowDialog();
         }
+
+        private void btn_Region_Click(object sender, EventArgs e)
+        {
+            FormTouristInformationByRegion ftbr = new FormTouristInformationByRegion();
+            ftbr.ShowDialog();
+        }
+
+        private void btn_Epillogue_Click(object sender, EventArgs e)
+        {
+            FormApilogue fa = new FormApilogue();
+            fa.ShowDialog();
+        }
     }
 }

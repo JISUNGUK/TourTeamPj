@@ -49,6 +49,7 @@
             this.btn_Region.TabIndex = 0;
             this.btn_Region.Text = "지역별 관광정보";
             this.btn_Region.UseVisualStyleBackColor = true;
+            this.btn_Region.Click += new System.EventHandler(this.btn_Region_Click);
             // 
             // btn_Total
             // 
@@ -86,6 +87,7 @@
             this.btn_Epillogue.TabIndex = 5;
             this.btn_Epillogue.Text = "내일로 후기";
             this.btn_Epillogue.UseVisualStyleBackColor = true;
+            this.btn_Epillogue.Click += new System.EventHandler(this.btn_Epillogue_Click);
             // 
             // btn_MySchduel
             // 
