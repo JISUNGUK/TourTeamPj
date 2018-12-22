@@ -33,20 +33,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EO.Base">
-      <HintPath>..\..\종완파일\MES작품\투어앱\투어앱\일단다한거 v1\TourTeamProject\bin\Debug\EO.Base.dll</HintPath>
+    <Reference Include="EO.Base, Version=18.3.46.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EO\EO.Base.dll</HintPath>
     </Reference>
-    <Reference Include="EO.Web">
-      <HintPath>..\..\종완파일\MES작품\투어앱\투어앱\일단다한거 v1\TourTeamProject\bin\Debug\EO.Web.dll</HintPath>
+    <Reference Include="EO.Web, Version=18.3.46.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EO\EO.Web.dll</HintPath>
     </Reference>
-    <Reference Include="EO.Web.Design">
-      <HintPath>..\..\종완파일\MES작품\투어앱\투어앱\일단다한거 v1\TourTeamProject\bin\Debug\EO.Web.Design.dll</HintPath>
+    <Reference Include="EO.Web.Design, Version=18.3.46.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EO\EO.Web.Design.dll</HintPath>
     </Reference>
-    <Reference Include="EO.WebBrowser">
-      <HintPath>..\..\종완파일\MES작품\투어앱\투어앱\일단다한거 v1\TourTeamProject\bin\Debug\EO.WebBrowser.dll</HintPath>
+    <Reference Include="EO.WebBrowser, Version=18.3.46.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EO\EO.WebBrowser.dll</HintPath>
     </Reference>
-    <Reference Include="EO.WebEngine">
-      <HintPath>..\..\종완파일\MES작품\투어앱\투어앱\일단다한거 v1\TourTeamProject\bin\Debug\EO.WebEngine.dll</HintPath>
+    <Reference Include="EO.WebEngine, Version=18.3.46.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EO\EO.WebEngine.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
