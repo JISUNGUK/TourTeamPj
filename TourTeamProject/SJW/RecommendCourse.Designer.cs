@@ -141,7 +141,6 @@
             this.radioFamily.TabIndex = 7;
             this.radioFamily.TabStop = true;
             this.radioFamily.Text = "가족코스";
-            this.radioFamily.UseVisualStyleBackColor = true;
             this.radioFamily.CheckedChanged += new System.EventHandler(this.radioFamily_CheckedChanged);
             // 
             // aloneCourse
@@ -153,7 +152,6 @@
             this.aloneCourse.TabIndex = 8;
             this.aloneCourse.TabStop = true;
             this.aloneCourse.Text = "나홀로코스";
-            this.aloneCourse.UseVisualStyleBackColor = true;
             this.aloneCourse.CheckedChanged += new System.EventHandler(this.radioFamily_CheckedChanged);
             // 
             // radioHealing
@@ -165,7 +163,6 @@
             this.radioHealing.TabIndex = 9;
             this.radioHealing.TabStop = true;
             this.radioHealing.Text = "힐링코스";
-            this.radioHealing.UseVisualStyleBackColor = true;
             // 
             // TasteCouse
             // 
@@ -176,7 +173,6 @@
             this.TasteCouse.TabIndex = 10;
             this.TasteCouse.TabStop = true;
             this.TasteCouse.Text = "맛코스";
-            this.TasteCouse.UseVisualStyleBackColor = true;
             this.TasteCouse.CheckedChanged += new System.EventHandler(this.radioFamily_CheckedChanged);
             // 
             // campingCouse
@@ -188,7 +184,6 @@
             this.campingCouse.TabIndex = 11;
             this.campingCouse.TabStop = true;
             this.campingCouse.Text = "캠핑코스";
-            this.campingCouse.UseVisualStyleBackColor = true;
             this.campingCouse.CheckedChanged += new System.EventHandler(this.radioFamily_CheckedChanged);
             // 
             // walkingCourse
@@ -200,7 +195,6 @@
             this.walkingCourse.TabIndex = 12;
             this.walkingCourse.TabStop = true;
             this.walkingCourse.Text = "도보코스";
-            this.walkingCourse.UseVisualStyleBackColor = true;
             // 
             // btnPreview
             // 
