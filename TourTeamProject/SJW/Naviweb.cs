@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using EO.WebBrowser;
 using MetroFramework.Forms;
+using EO.WebBrowser;
 
 namespace TourTeamProject
 {
@@ -21,13 +21,13 @@ namespace TourTeamProject
         public Naviweb()
         {
             InitializeComponent();
-        }       
+        }
         public string Address { get => address; set => address = value; }
         public string Location1 { get => location; set => location = value; }
 
         private void Naviweb_Load(object sender, EventArgs e)
-        {          
-            InitWebbrowser("www.google.co.kr/maps/search/"+address);
+        {
+            InitWebbrowser("www.google.co.kr/maps/search/" + address);
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace TourTeamProject
         /// <param name="url"></param>
         public void InitWebbrowser(string url)
         {
-            nv=webView1.LoadUrl("https://" + url);
+            nv = webView1.LoadUrl("https://" + url);
             if (webView1.CanGoBack)
                 btnBack.Enabled = true;
             else
@@ -46,22 +46,22 @@ namespace TourTeamProject
                 btnForward.Enabled = true;
             else
                 btnForward.Enabled = false;
-            if(url.Contains("www.google.co.kr/maps/search"))
-            { 
-            while(true)
+            if (url.Contains("www.google.co.kr/maps/search"))
             {
-                MessageBox.Show("로딩중:"+webView1.Url);
-                if (webView1.Url.Contains("/@"))
+                while (true)
                 {
-                    searchKeyword.Text = webView1.Url;
-                    webPage.WebView = webView1;
-                    int latitude = searchKeyword.Text.IndexOf("/@");
-                    int altitude = searchKeyword.Text.IndexOf("z/");
-                    latitudeText.Text = searchKeyword.Text.Substring(latitude+2,altitude-latitude-1);
-                    location = latitudeText.Text;
-                    break;
+                    MessageBox.Show("로딩중:" + webView1.Url);
+                    if (webView1.Url.Contains("/@"))
+                    {
+                        searchKeyword.Text = webView1.Url;
+                        webPage.WebView = webView1;
+                        int latitude = searchKeyword.Text.IndexOf("/@");
+                        int altitude = searchKeyword.Text.IndexOf("z/");
+                        latitudeText.Text = searchKeyword.Text.Substring(latitude + 2, altitude - latitude - 1);
+                        location = latitudeText.Text;
+                        break;
+                    }
                 }
-            }
             }
             else
             {
@@ -72,12 +72,12 @@ namespace TourTeamProject
         }
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
-      {
-            if(e.KeyCode==Keys.Enter)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
                 InitWebbrowser(searchKeyword.Text);
             }
-            
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -92,6 +92,6 @@ namespace TourTeamProject
             webPage.WebView = webView1;
         }
 
-       
+
     }
 }

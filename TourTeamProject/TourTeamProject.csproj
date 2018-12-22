@@ -133,19 +133,27 @@
     <Compile Include="SJW\DetailTour.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SJW\DetailTour.Designer.cs" />
+    <Compile Include="SJW\DetailTour.Designer.cs">
+      <DependentUpon>DetailTour.cs</DependentUpon>
+    </Compile>
     <Compile Include="SJW\IntegratedSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SJW\IntegratedSearch.Designer.cs" />
+    <Compile Include="SJW\IntegratedSearch.Designer.cs">
+      <DependentUpon>IntegratedSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="SJW\Naviweb.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SJW\Naviweb.Designer.cs" />
+    <Compile Include="SJW\Naviweb.Designer.cs">
+      <DependentUpon>Naviweb.cs</DependentUpon>
+    </Compile>
     <Compile Include="SJW\RecommendCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SJW\RecommendCourse.Designer.cs" />
+    <Compile Include="SJW\RecommendCourse.Designer.cs">
+      <DependentUpon>RecommendCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="SJW\TourSearchResult.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -181,10 +189,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SJW\DetailTour.resx" />
-    <EmbeddedResource Include="SJW\IntegratedSearch.resx" />
-    <EmbeddedResource Include="SJW\Naviweb.resx" />
-    <EmbeddedResource Include="SJW\RecommendCourse.resx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -16,7 +16,7 @@ namespace TourTeamProject
 {
     public partial class DetailTour : MetroForm
     {
-        private string contentid, contentpid,address;
+        private string contentid, contentpid, address;
         private string servicekey = "7V8bwwI0r4itRyj%2BK9kCFfFaFV5sv7alU9slMR%2FGEbZBiRwf1lkOkEq%2Fn0eR%2FXwckcRZq2xCyV4nnbYzzaGYRg%3D%3D";
         private string url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon?ServiceKey=";
 
@@ -32,7 +32,7 @@ namespace TourTeamProject
 
         private void addrLabel_Click(object sender, EventArgs e)
         {
-            if(addrLabel.Text!="주소:없음")
+            if (addrLabel.Text != "주소:없음")
             {
                 Naviweb nw = new Naviweb();
                 nw.Address = address;
@@ -40,13 +40,13 @@ namespace TourTeamProject
             }
         }
 
-       
+
 
         public string Address { get => address; set => address = value; }
 
         private void DetailTour_Load(object sender, EventArgs e)
         {
-          
+
             string path = url + servicekey + "&contentTypeId=" + contentpid + "&contentId=" + contentid + endurl;
             HttpWebRequest hw = (HttpWebRequest)WebRequest.Create(path);
             HttpWebResponse hr = (HttpWebResponse)hw.GetResponse();
@@ -60,14 +60,14 @@ namespace TourTeamProject
 
             result.Text = jitem["overview"].ToString().Replace("<b>", "").Replace("</b>", "").Replace("<br>", "").Replace("</br>", "").Replace("<br />", "").Replace("<strong>", "").Replace("</strong>", "");
             Title.Text = jitem["title"].ToString();
-            if(jitem["firstimage"]!=null)
-            { 
-               
+            if (jitem["firstimage"] != null)
+            {
+
                 PlacePIc.ImageLocation = jitem["firstimage"].ToString();
             }
             if (jitem["zipcode"] != null)
                 PostLabel.Text = "우편번호:" + jitem["zipcode"].ToString();
-            if(jitem["addr1"]!=null)
+            if (jitem["addr1"] != null)
                 addrLabel.Text = "주소:" + jitem["addr1"].ToString();
 
 

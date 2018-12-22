@@ -42,7 +42,7 @@ namespace TourTeamProject
         {
             InitializeComponent();
         }
-        
+
 
         private void RecommendCourse_Load(object sender, EventArgs e)
         {
@@ -59,35 +59,35 @@ namespace TourTeamProject
         private void DisplayResult()
         {
             string keyword = WebUtility.UrlEncode(searchKeyword.Text);
-            string url=apiurl+language+languageAfter+keyword+afterurl+cat1+cat2w+cat2+cat3w+cat3+lasturi+numofRows+numRow+numpage+pageNo;
+            string url = apiurl + language + languageAfter + keyword + afterurl + cat1 + cat2w + cat2 + cat3w + cat3 + lasturi + numofRows + numRow + numpage + pageNo;
             hw = (HttpWebRequest)WebRequest.Create(url);
             hr = (HttpWebResponse)hw.GetResponse();
             sr = new StreamReader(hr.GetResponseStream());
-            IR=new IntegratedSearch();
+            IR = new IntegratedSearch();
             IR.NumofRows = numRow;
             IR.PageCount = pageNo;
             IR.DisplayResult(Tourgridview1, sr.ReadToEnd());
             pageNum.Text = "검색건수:" + IR.TotalCount;
             currentPage.Text = "현재 쪽:" + IR.PageCount;
-            pageNo = IR.PageCount;           
-            totalpgNum.Text = "전체 쪽수:"+ IR.TotalPageNum;
-            
-            TourLIST=IR.TourList;
-            
-            
+            pageNo = IR.PageCount;
+            totalpgNum.Text = "전체 쪽수:" + IR.TotalPageNum;
+
+            TourLIST = IR.TourList;
+
+
 
 
         }
 
         private void radioFamily_CheckedChanged(object sender, EventArgs e)
         {
-            if(radioFamily.Checked)
+            if (radioFamily.Checked)
             {
                 cat1 = "C01";
                 cat2 = "C0112";
                 cat3 = "C01120001";
             }
-            else if(aloneCourse.Checked)
+            else if (aloneCourse.Checked)
             {
                 cat1 = "C01";
                 cat2 = "C0113";
@@ -123,7 +123,7 @@ namespace TourTeamProject
 
         private void Tourgridview1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(Tourgridview1.CurrentRow.Index>-1)
+            if (Tourgridview1.CurrentRow.Index > -1)
             {
                 string contentid = TourLIST[Tourgridview1.CurrentRow.Index].Contentid;
                 string contentpid = TourLIST[Tourgridview1.CurrentRow.Index].Contenttypeid;
@@ -138,13 +138,13 @@ namespace TourTeamProject
 
         private void btnFirst_Click(object sender, EventArgs e)
         {
-        if(pageNo!=1)
-            { 
-            pageNo = 1;
+            if (pageNo != 1)
+            {
+                pageNo = 1;
                 currentPage.Text = "현재 쪽:" + pageNo;
                 DisplayResult();
             }
-        else
+            else
                 MessageBox.Show("첫페이지입니다");
 
 
@@ -156,8 +156,8 @@ namespace TourTeamProject
             {
                 pageNo--;
                 DisplayResult();
-                currentPage.Text ="현재 쪽:"+pageNo;
-                
+                currentPage.Text = "현재 쪽:" + pageNo;
+
             }
             else
                 MessageBox.Show("첫페이지입니다");
@@ -166,12 +166,12 @@ namespace TourTeamProject
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-        if(pageNo<IR.TotalPageNum)
-            { 
-            pageNo++;
+            if (pageNo < IR.TotalPageNum)
+            {
+                pageNo++;
                 DisplayResult();
                 currentPage.Text = "현재 쪽:" + pageNo;
-                
+
             }
             else
                 MessageBox.Show("마지막 페이지입니다");
@@ -180,21 +180,21 @@ namespace TourTeamProject
 
         private void btnLast_Click(object sender, EventArgs e)
         {
-        if(pageNo!=IR.TotalPageNum)
+            if (pageNo != IR.TotalPageNum)
             {
-            pageNo =IR.TotalPageNum;
+                pageNo = IR.TotalPageNum;
                 DisplayResult();
                 currentPage.Text = "현재 쪽:" + pageNo;
-                
+
             }
-        else
+            else
                 MessageBox.Show("더이상 페이지가 없습니다");
 
         }
 
         private void RowNum_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(RowNum.SelectedIndex>-1)
+            if (RowNum.SelectedIndex > -1)
             {
                 numRow = Int32.Parse(RowNum.SelectedItem.ToString());
             }
@@ -202,10 +202,10 @@ namespace TourTeamProject
 
         private void searchKeyword_KeyUp(object sender, KeyEventArgs e)
         {
-        if(e.KeyCode==Keys.Enter)
-            { 
-            pageNo = 1;
-            DisplayResult();
+            if (e.KeyCode == Keys.Enter)
+            {
+                pageNo = 1;
+                DisplayResult();
             }
         }
     }

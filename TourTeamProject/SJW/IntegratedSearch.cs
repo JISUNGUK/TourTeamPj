@@ -18,12 +18,12 @@ namespace TourTeamProject
     public partial class IntegratedSearch : MetroForm
     {
         private List<TourSearchResult> tourList = new List<TourSearchResult>();
-        HttpWebRequest hw=null;
+        HttpWebRequest hw = null;
         HttpWebResponse hr = null;
         StreamReader sr = null;
         string apiurl = "http://api.visitkorea.or.kr/openapi/service/rest/";
         string language = "KorService";
-        string languageAfter="/searchKeyword?ServiceKey=7V8bwwI0r4itRyj%2BK9kCFfFaFV5sv7alU9slMR%2FGEbZBiRwf1lkOkEq%2Fn0eR%2FXwckcRZq2xCyV4nnbYzzaGYRg%3D%3D&keyword=";
+        string languageAfter = "/searchKeyword?ServiceKey=7V8bwwI0r4itRyj%2BK9kCFfFaFV5sv7alU9slMR%2FGEbZBiRwf1lkOkEq%2Fn0eR%2FXwckcRZq2xCyV4nnbYzzaGYRg%3D%3D&keyword=";
         string afterurl = "&areaCode=&sigunguCode=&cat1=&cat2=&cat3=&listYN=Y&MobileOS=ETC&MobileApp=TourAPI3.0_Guide&arrange=O&_type=json&numOfRows=";
         string pagenum = "&pageNo=";
         int pageCount = 1;//현재페이지
@@ -44,33 +44,33 @@ namespace TourTeamProject
             InitializeComponent();
         }
 
-        
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-          
 
-           
+
+
+
         }
 
         private void IntegratedSearch_Load(object sender, EventArgs e)
         {
-           
+
 
 
         }
 
         private void cat2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
 
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             PageCount = 1;
-            string json=jsonParse(searchKeyword.Text);
-            DisplayResult(tourGridview,json);
+            string json = jsonParse(searchKeyword.Text);
+            DisplayResult(tourGridview, json);
         }
         /// <summary>
         /// json출력결과를 받아서 해당 데이터로 된 데이터테이블을 반환시켜줌
@@ -80,7 +80,7 @@ namespace TourTeamProject
         public DataTable GetTourTable(string word)
         {
             JObject jo = JObject.Parse(word);
-            
+
             JObject JR = JObject.Parse(jo["response"].ToString());
             if (JR["body"] != null)
             {
@@ -141,7 +141,7 @@ namespace TourTeamProject
                                 tr.Imageurl2 = noimageUrl;
                             }
                             tourList.Add(tr);
-                            
+
                         }
                     }
                     else
@@ -190,7 +190,7 @@ namespace TourTeamProject
                         dr[0] = v.Title;
                         dr[1] = v.Address;
                         dr[2] = v.Mapx;
-                        dr[3] = v.Mapy;                        
+                        dr[3] = v.Mapy;
                         dr[4] = v.Tel;
                         dr[5] = displayImage(v.Imageurl);
 
@@ -229,8 +229,8 @@ namespace TourTeamProject
             {
                 dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                 dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                dgv.AutoSize = true;               
-                    
+                dgv.AutoSize = true;
+
             }
         }
         /// <summary>
@@ -241,23 +241,23 @@ namespace TourTeamProject
         private string jsonParse(string searchword)
         {
             string keyword = WebUtility.UrlEncode(searchword);
-            string url = apiurl +Language + languageAfter+keyword + afterurl + NumofRows + pagenum + PageCount;
+            string url = apiurl + Language + languageAfter + keyword + afterurl + NumofRows + pagenum + PageCount;
             hw = (HttpWebRequest)WebRequest.Create(url);
             hr = (HttpWebResponse)hw.GetResponse();
             sr = new StreamReader(hr.GetResponseStream());
-            
+
             string result = sr.ReadToEnd();
             JObject jo = JObject.Parse(result);
             JObject JR = JObject.Parse(jo["response"].ToString());
-            if(JR["body"]!=null)
-            { 
-            JObject JB = JObject.Parse(JR["body"].ToString());
-            TotalCount = Int32.Parse(JB["totalCount"].ToString());
-            if (TotalCount % NumofRows != 0)
-                TotalPageNum = (TotalCount / NumofRows) + 1;
-            else
-                TotalPageNum = (TotalCount / NumofRows);
-            resultLbl.Text = "검색건수:"+ TotalCount;
+            if (JR["body"] != null)
+            {
+                JObject JB = JObject.Parse(JR["body"].ToString());
+                TotalCount = Int32.Parse(JB["totalCount"].ToString());
+                if (TotalCount % NumofRows != 0)
+                    TotalPageNum = (TotalCount / NumofRows) + 1;
+                else
+                    TotalPageNum = (TotalCount / NumofRows);
+                resultLbl.Text = "검색건수:" + TotalCount;
             }
             return result;
         }
@@ -268,18 +268,18 @@ namespace TourTeamProject
         /// <returns></returns>
         public static Byte[] displayImage(string imagepath)
         {
-            
+
             int i = 0;
             byte[] imageByte;
             HttpWebRequest hr = (HttpWebRequest)WebRequest.Create(imagepath);
             HttpWebResponse hrs = (HttpWebResponse)hr.GetResponse();
             Stream sr = hrs.GetResponseStream();
             MemoryStream ms = new MemoryStream();
-            CopyStream(sr,ms);
+            CopyStream(sr, ms);
             imageByte = ms.ToArray();
 
-           
-            return imageByte; 
+
+            return imageByte;
         }
         public static void CopyStream(Stream input, Stream output)
         {
@@ -293,20 +293,20 @@ namespace TourTeamProject
 
         private void tourGridview_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string contentid=TourList[tourGridview.CurrentRow.Index].Contentid;
+            string contentid = TourList[tourGridview.CurrentRow.Index].Contentid;
             string contentpid = TourList[tourGridview.CurrentRow.Index].Contenttypeid;
-            string address= TourList[tourGridview.CurrentRow.Index].Address;
+            string address = TourList[tourGridview.CurrentRow.Index].Address;
             DetailTour dt = new DetailTour();
             dt.Contentid = contentid;
             dt.Contentpid = contentpid;
             dt.Address = address;
             dt.Show();
-            
+
         }
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void tourGridview_DataError(object sender, DataGridViewDataErrorEventArgs e)
@@ -326,15 +326,15 @@ namespace TourTeamProject
 
         private void comboBox1_SelectedIndexChanged_2(object sender, EventArgs e)
         {
-            if(RowNum.SelectedIndex>-1)
+            if (RowNum.SelectedIndex > -1)
             {
-                NumofRows =Int32.Parse(RowNum.SelectedItem.ToString());
+                NumofRows = Int32.Parse(RowNum.SelectedItem.ToString());
             }
         }
 
         private void splitContainer1_Scroll(object sender, ScrollEventArgs e)
         {
-            
+
         }
 
         private void btnFirst_Click(object sender, EventArgs e)
@@ -347,7 +347,7 @@ namespace TourTeamProject
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
-            if(PageCount>1)
+            if (PageCount > 1)
             {
                 PageCount--;
                 DisplayResult(tourGridview, jsonParse(searchKeyword.Text));
@@ -370,7 +370,7 @@ namespace TourTeamProject
 
         }
 
-       
+
 
         private void splitContainer1_Panel1_Paint_1(object sender, PaintEventArgs e)
         {
@@ -379,7 +379,7 @@ namespace TourTeamProject
 
         private void searchKeyword_KeyUp(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode==Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 PageCount = 1;
                 string json = jsonParse(searchKeyword.Text);
@@ -390,11 +390,11 @@ namespace TourTeamProject
 
         private void btnLast_Click_1(object sender, EventArgs e)
         {
-            if(PageCount != TotalPageNum)
-            { 
-            PageCount = TotalPageNum;
-            string json = jsonParse(searchKeyword.Text);
-            DisplayResult(tourGridview, json);
+            if (PageCount != TotalPageNum)
+            {
+                PageCount = TotalPageNum;
+                string json = jsonParse(searchKeyword.Text);
+                DisplayResult(tourGridview, json);
             }
             else
                 MessageBox.Show("마지막 페이지입니다");
