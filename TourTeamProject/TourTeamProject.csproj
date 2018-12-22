@@ -33,6 +33,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EO.Base">
+      <HintPath>..\..\종완파일\MES작품\투어앱\투어앱\일단다한거 v1\TourTeamProject\bin\Debug\EO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.Web">
+      <HintPath>..\..\종완파일\MES작품\투어앱\투어앱\일단다한거 v1\TourTeamProject\bin\Debug\EO.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.Web.Design">
+      <HintPath>..\..\종완파일\MES작품\투어앱\투어앱\일단다한거 v1\TourTeamProject\bin\Debug\EO.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebBrowser">
+      <HintPath>..\..\종완파일\MES작품\투어앱\투어앱\일단다한거 v1\TourTeamProject\bin\Debug\EO.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.WebEngine">
+      <HintPath>..\..\종완파일\MES작품\투어앱\투어앱\일단다한거 v1\TourTeamProject\bin\Debug\EO.WebEngine.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -115,6 +130,23 @@
     <Compile Include="JSU\SpaceTourInfo.cs" />
     <Compile Include="JSU\TourInfo.cs" />
     <Compile Include="LSK\TourSk.cs" />
+    <Compile Include="SJW\DetailTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SJW\DetailTour.Designer.cs" />
+    <Compile Include="SJW\IntegratedSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SJW\IntegratedSearch.Designer.cs" />
+    <Compile Include="SJW\Naviweb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SJW\Naviweb.Designer.cs" />
+    <Compile Include="SJW\RecommendCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SJW\RecommendCourse.Designer.cs" />
+    <Compile Include="SJW\TourSearchResult.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,7 +179,12 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SJW\DetailTour.resx" />
+    <EmbeddedResource Include="SJW\IntegratedSearch.resx" />
+    <EmbeddedResource Include="SJW\Naviweb.resx" />
+    <EmbeddedResource Include="SJW\RecommendCourse.resx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -161,6 +198,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no_detail_img.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\연결.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

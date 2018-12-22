@@ -94,5 +94,18 @@ namespace TourTeamProject
             FormApilogue fa = new FormApilogue();
             fa.ShowDialog();
         }
+
+        private void btn_Total_Click(object sender, EventArgs e)
+        {
+            IntegratedSearch ITS = new IntegratedSearch();
+            ITS.Show();
+        }
+
+        private void btn_RecommandPlace_Click(object sender, EventArgs e)
+        {
+            RecommendCourse rcs = new RecommendCourse();
+            rcs.Show();
+
+        }
     }
 }
