@@ -19,6 +19,8 @@ namespace TourTeamProject
         private string contentid, contentpid, address;
         private string servicekey = "7V8bwwI0r4itRyj%2BK9kCFfFaFV5sv7alU9slMR%2FGEbZBiRwf1lkOkEq%2Fn0eR%2FXwckcRZq2xCyV4nnbYzzaGYRg%3D%3D";
         private string url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon?ServiceKey=";
+        private string mapx;
+        private string mapy;
 
         private string endurl = "&MobileOS=ETC&MobileApp=TourAPI3.0_Guide&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y&transGuideYN=Y&_type=json";
         public DetailTour()
@@ -43,6 +45,8 @@ namespace TourTeamProject
 
 
         public string Address { get => address; set => address = value; }
+        public string Mapx { get => mapx; set => mapx = value; }
+        public string Mapy { get => mapy; set => mapy = value; }
 
         private void DetailTour_Load(object sender, EventArgs e)
         {

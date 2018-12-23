@@ -114,9 +114,9 @@ namespace TourTeamProject
                                 tr.Address = item["addr1"].ToString();
                             if (item["mapx"] != null)
                             {
-                                tr.Mapx = item["mapx"].ToString();
+                                tr.Mapx = item["mapy"].ToString();
 
-                                tr.Mapy = item["mapy"].ToString();
+                                tr.Mapy = item["mapx"].ToString();
                             }
 
                             if (item["tel"] != null)
@@ -153,8 +153,8 @@ namespace TourTeamProject
                         tr.Contenttypeid = jitem["contenttypeid"].ToString();
                         if (jitem["addr1"] != null)
                             tr.Address = jitem["addr1"].ToString();
-                        tr.Mapx = jitem["mapx"].ToString();
-                        tr.Mapy = jitem["mapy"].ToString();
+                        tr.Mapx = jitem["mapy"].ToString();
+                        tr.Mapy = jitem["mapx"].ToString();
                         if (jitem["firstimage"] != null)
                             tr.Imageurl = jitem["firstimage"].ToString();
                         else
@@ -296,6 +296,8 @@ namespace TourTeamProject
             string contentid = TourList[tourGridview.CurrentRow.Index].Contentid;
             string contentpid = TourList[tourGridview.CurrentRow.Index].Contenttypeid;
             string address = TourList[tourGridview.CurrentRow.Index].Address;
+            string mapx = TourList[tourGridview.CurrentRow.Index].Mapx;
+            string mapy= TourList[tourGridview.CurrentRow.Index].Mapy;
             DetailTour dt = new DetailTour();
             dt.Contentid = contentid;
             dt.Contentpid = contentpid;

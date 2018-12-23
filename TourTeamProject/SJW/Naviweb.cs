@@ -18,16 +18,20 @@ namespace TourTeamProject
         NavigationTask nv;
         private string address;
         private string location;
+        private string mapx;
+        private string mapy;
         public Naviweb()
         {
             InitializeComponent();
         }
         public string Address { get => address; set => address = value; }
         public string Location1 { get => location; set => location = value; }
+        public string Mapx { get => mapx; set => mapx = value; }
+        public string Mapy { get => mapy; set => mapy = value; }
 
         private void Naviweb_Load(object sender, EventArgs e)
         {
-            InitWebbrowser("www.google.co.kr/maps/search/" + address);
+            InitWebbrowser("www.google.co.kr/maps/search/"+"@"+mapx+","+mapy);
         }
 
         /// <summary>
@@ -46,7 +50,8 @@ namespace TourTeamProject
                 btnForward.Enabled = true;
             else
                 btnForward.Enabled = false;
-            if (url.Contains("www.google.co.kr/maps/search"))
+            webPage.WebView = webView1;
+           /* if (url.Contains("www.google.co.kr/maps/search"))
             {
                 while (true)
                 {
@@ -66,7 +71,7 @@ namespace TourTeamProject
             else
             {
                 webPage.WebView = webView1;
-            }
+            }*/
 
 
         }
