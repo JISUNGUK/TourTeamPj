@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_Tab3Title = new MetroFramework.Controls.MetroTabControl();
+            this.tabControl = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.grup_Goday = new System.Windows.Forms.GroupBox();
             this.dateTime_End = new MetroFramework.Controls.MetroDateTime();
@@ -50,12 +50,11 @@
             this.btn_Pick1 = new MetroFramework.Controls.MetroButton();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.lbl_Tab2Title = new System.Windows.Forms.Label();
             this.btn_Clear = new MetroFramework.Controls.MetroButton();
             this.btn_ShowSchdual = new MetroFramework.Controls.MetroButton();
             this.btn_Img = new MetroFramework.Controls.MetroButton();
-            this.lbl_Tab2Title = new System.Windows.Forms.Label();
-            this.lbl_Tab3Title.SuspendLayout();
+            this.tabControl.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.grup_Goday.SuspendLayout();
             this.grup_Tick.SuspendLayout();
@@ -63,18 +62,18 @@
             this.metroTabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbl_Tab3Title
+            // tabControl
             // 
-            this.lbl_Tab3Title.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.lbl_Tab3Title.Controls.Add(this.metroTabPage1);
-            this.lbl_Tab3Title.Controls.Add(this.metroTabPage2);
-            this.lbl_Tab3Title.Controls.Add(this.metroTabPage3);
-            this.lbl_Tab3Title.Location = new System.Drawing.Point(20, 60);
-            this.lbl_Tab3Title.Name = "lbl_Tab3Title";
-            this.lbl_Tab3Title.SelectedIndex = 2;
-            this.lbl_Tab3Title.Size = new System.Drawing.Size(1083, 482);
-            this.lbl_Tab3Title.TabIndex = 1;
-            this.lbl_Tab3Title.UseSelectable = true;
+            this.tabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tabControl.Controls.Add(this.metroTabPage1);
+            this.tabControl.Controls.Add(this.metroTabPage2);
+            this.tabControl.Controls.Add(this.metroTabPage3);
+            this.tabControl.Location = new System.Drawing.Point(20, 60);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(1083, 482);
+            this.tabControl.TabIndex = 1;
+            this.tabControl.UseSelectable = true;
             // 
             // metroTabPage1
             // 
@@ -85,7 +84,7 @@
             this.metroTabPage1.HorizontalScrollbarSize = 10;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 41);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(1075, 397);
+            this.metroTabPage1.Size = new System.Drawing.Size(1075, 437);
             this.metroTabPage1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "metroTabPage1";
@@ -376,72 +375,6 @@
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
             // 
-            // metroTextBox1
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(96, 2);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(13, 13);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.metroTextBox1.Lines = new string[] {
-        "지우자"};
-            this.metroTextBox1.Location = new System.Drawing.Point(777, 548);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Multiline = true;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(112, 18);
-            this.metroTextBox1.TabIndex = 2;
-            this.metroTextBox1.Text = "지우자";
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // btn_Clear
-            // 
-            this.btn_Clear.Location = new System.Drawing.Point(198, 548);
-            this.btn_Clear.Name = "btn_Clear";
-            this.btn_Clear.Size = new System.Drawing.Size(177, 46);
-            this.btn_Clear.TabIndex = 4;
-            this.btn_Clear.Text = "초기화";
-            this.btn_Clear.UseSelectable = true;
-            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
-            // 
-            // btn_ShowSchdual
-            // 
-            this.btn_ShowSchdual.Enabled = false;
-            this.btn_ShowSchdual.Location = new System.Drawing.Point(574, 548);
-            this.btn_ShowSchdual.Name = "btn_ShowSchdual";
-            this.btn_ShowSchdual.Size = new System.Drawing.Size(177, 42);
-            this.btn_ShowSchdual.TabIndex = 5;
-            this.btn_ShowSchdual.Text = "계획짜기";
-            this.btn_ShowSchdual.UseSelectable = true;
-            this.btn_ShowSchdual.Click += new System.EventHandler(this.btn_Next_Click);
-            // 
-            // btn_Img
-            // 
-            this.btn_Img.Enabled = false;
-            this.btn_Img.Location = new System.Drawing.Point(922, 548);
-            this.btn_Img.Name = "btn_Img";
-            this.btn_Img.Size = new System.Drawing.Size(177, 42);
-            this.btn_Img.TabIndex = 6;
-            this.btn_Img.Text = "내보내보기";
-            this.btn_Img.UseSelectable = true;
-            this.btn_Img.Click += new System.EventHandler(this.btn_Img_Click);
-            // 
             // lbl_Tab2Title
             // 
             this.lbl_Tab2Title.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -454,6 +387,38 @@
             this.lbl_Tab2Title.Text = "여행일정 (2019,5555,5555)~(232323123)";
             this.lbl_Tab2Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btn_Clear
+            // 
+            this.btn_Clear.Location = new System.Drawing.Point(173, 542);
+            this.btn_Clear.Name = "btn_Clear";
+            this.btn_Clear.Size = new System.Drawing.Size(177, 46);
+            this.btn_Clear.TabIndex = 4;
+            this.btn_Clear.Text = "초기화";
+            this.btn_Clear.UseSelectable = true;
+            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
+            // 
+            // btn_ShowSchdual
+            // 
+            this.btn_ShowSchdual.Enabled = false;
+            this.btn_ShowSchdual.Location = new System.Drawing.Point(462, 544);
+            this.btn_ShowSchdual.Name = "btn_ShowSchdual";
+            this.btn_ShowSchdual.Size = new System.Drawing.Size(177, 42);
+            this.btn_ShowSchdual.TabIndex = 5;
+            this.btn_ShowSchdual.Text = "계획짜기";
+            this.btn_ShowSchdual.UseSelectable = true;
+            this.btn_ShowSchdual.Click += new System.EventHandler(this.btn_Next_Click);
+            // 
+            // btn_Img
+            // 
+            this.btn_Img.Enabled = false;
+            this.btn_Img.Location = new System.Drawing.Point(751, 544);
+            this.btn_Img.Name = "btn_Img";
+            this.btn_Img.Size = new System.Drawing.Size(177, 42);
+            this.btn_Img.TabIndex = 6;
+            this.btn_Img.Text = "내보내보기";
+            this.btn_Img.UseSelectable = true;
+            this.btn_Img.Click += new System.EventHandler(this.btn_Img_Click);
+            // 
             // FrmMySchdual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -461,13 +426,12 @@
             this.ClientSize = new System.Drawing.Size(1126, 626);
             this.Controls.Add(this.btn_Img);
             this.Controls.Add(this.btn_ShowSchdual);
-            this.Controls.Add(this.lbl_Tab3Title);
-            this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.btn_Clear);
+            this.Controls.Add(this.tabControl);
             this.Name = "FrmMySchdual";
             this.Text = "여행일정 만들기";
             this.Load += new System.EventHandler(this.FrmMySchdual_Load);
-            this.lbl_Tab3Title.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.grup_Goday.ResumeLayout(false);
             this.grup_Tick.ResumeLayout(false);
@@ -481,7 +445,7 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroTabControl lbl_Tab3Title;
+        private MetroFramework.Controls.MetroTabControl tabControl;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private MetroFramework.Controls.MetroTabPage metroTabPage3;
@@ -506,7 +470,6 @@
         private MetroFramework.Controls.MetroButton btn_Pick4;
         private MetroFramework.Controls.MetroButton btn_Pick3;
         private MetroFramework.Controls.MetroButton btn_Pick2;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroButton btn_Img;
         private System.Windows.Forms.Label lbl_Tab2Title;
     }

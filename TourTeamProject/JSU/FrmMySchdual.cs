@@ -22,17 +22,40 @@ namespace TourTeamProject
         public FrmMySchdual()
         {
             InitializeComponent();
-            //newControl @new = new newControl("서울");
-            //@new.Location = new Point(100, 100);
-            //metroTabPage3.Controls.Add(@new);
+
+            tabControl.SelectTab(0);
         }
 
+        private void FrmMySchdual_Load(object sender, EventArgs e)
+        {
+            tabControl.TabPages["metroTabPage1"].Text = "STEP01\n티켓/출발일\n";
+            tabControl.TabPages["metroTabPage2"].Text = "STEP02\n여행일정 만들기\n";
+            tabControl.TabPages["metroTabPage3"].Text = "STEP03\n완료/출력\n";
+
+
+            rbo_Rail_3.Text = "내일로패스\n        3일";
+            rbo_Rail_5.Text = "내일로패스\n        5일";
+            rbo_Rail_7.Text = "내일로패스\n        7일";
+            rbo_Hana_3.Text = "하나로패스\n        3일";
+        }
+
+        #region 여행일자 변수 셋팅부
+        /// <summary>
+        /// 시작시점의 날자가 바뀌면 자동 종료되는날 자동연산
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dateTime_Start_ValueChanged(object sender, EventArgs e)
         {
             dateTime_End.Value = dateTime_Start.Value.AddDays(dayAddParameter);
         }
 
-        bool btnChk = false;
+        bool btnChk = false;            //  티켓 설정했는지 플레그
+        /// <summary>
+        /// 티켓을 골랐는지 체크하고, 여행기간을 설정함
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Rail_3_CheckedChanged(object sender, EventArgs e)
         {
             btnChk = true;
@@ -51,20 +74,12 @@ namespace TourTeamProject
             }
             dateTime_Start_ValueChanged(null, null);
         }
-
-        private void FrmMySchdual_Load(object sender, EventArgs e)
-        {
-            lbl_Tab3Title.TabPages["metroTabPage1"].Text = "STEP01\n티켓/출발일\n";
-            lbl_Tab3Title.TabPages["metroTabPage2"].Text = "STEP02\n여행일정 만들기\n";
-            lbl_Tab3Title.TabPages["metroTabPage3"].Text = "STEP03\n완료/출력\n";
-
-
-            rbo_Rail_3.Text = "내일로패스\n        3일";
-            rbo_Rail_5.Text = "내일로패스\n        5일";
-            rbo_Rail_7.Text = "내일로패스\n        7일";
-            rbo_Hana_3.Text = "하나로패스\n        3일";
-        }
-
+        
+        /// <summary>
+        /// 클리어 이벤트 호출
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Clear_Click(object sender, EventArgs e)
         {
             ControlClear();
@@ -75,7 +90,7 @@ namespace TourTeamProject
         /// </summary>
         private void ControlClear()
         {
-            lbl_Tab3Title.SelectTab(0);
+            tabControl.SelectTab(0);
 
             rbo_Rail_3.Checked = false;
             rbo_Rail_5.Checked = false;
@@ -91,6 +106,8 @@ namespace TourTeamProject
             btn_Pick7.Text = string.Empty;
             btn_Pick8.Text = string.Empty;
         }
+        #endregion
+
 
         /// <summary>
         /// 여행일정 짜기 버튼
@@ -116,11 +133,7 @@ namespace TourTeamProject
                 String.Format("여행일정 : ({0}) ~ ({1}) ", times[0].ToShortDateString(), times[1].ToShortDateString());
 
             MakeSchdual();
-            lbl_Tab3Title.SelectTab(2);
-
-            //newControl @new = new newControl();
-            //@new.Show();
-
+            tabControl.SelectTab(2);
         }
 
         /// <summary>
@@ -166,17 +179,21 @@ namespace TourTeamProject
         //    }
         //    metroTextBox1.Text = sb.ToString();
         //}
+        
         void MakeSchdual()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(lbl_Title.Text);
-            newControl form;
-            List<Control> controls = new List<Control>();
-            for (int i = 1; i < pickNode + 1; i++)
+
+            newControl form;                                    //  동적 컨트롤 생성을 위한 객체 선언
+            List<Control> controls = new List<Control>();       //  생성한 컨트롤을 담을 리스트
+            for (int i = 1; i < pickNode + 1; i++)              //  사용자가 고른 여행지의 수 만큼
             {
                 switch (i)
                 {
                     case 1:
+                        //string[] setValue=new string[] {i.ToString(), btn_Pick1.Text}
+                        //  방문혜택, 축제정보 보내줘야함
                         form = new newControl(btn_Pick1.Text);
                         form.Location = new Point(0, 50);
                         controls.Add(form);
@@ -220,8 +237,8 @@ namespace TourTeamProject
                         break;
                 }
             }
+
             metroTabPage3.Controls.AddRange(controls.ToArray());
-            metroTextBox1.Text = sb.ToString();
             btn_Img.Enabled = true;
         }
 

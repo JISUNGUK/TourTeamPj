@@ -40,7 +40,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.Controls.Add(this.btn_Fastival);
             this.panel1.Controls.Add(this.lbl_Title);
             this.panel1.Controls.Add(this.btn_TourInfo);
@@ -55,11 +55,16 @@
             // btn_Fastival
             // 
             this.btn_Fastival.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_Fastival.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Fastival.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_Fastival.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Fastival.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.btn_Fastival.Location = new System.Drawing.Point(280, 71);
             this.btn_Fastival.Name = "btn_Fastival";
             this.btn_Fastival.Size = new System.Drawing.Size(68, 46);
             this.btn_Fastival.TabIndex = 7;
             this.btn_Fastival.Text = "축제정보";
+            this.btn_Fastival.UseCustomBackColor = true;
             this.btn_Fastival.UseSelectable = true;
             // 
             // lbl_Title
@@ -67,6 +72,7 @@
             this.lbl_Title.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_Title.AutoSize = true;
             this.lbl_Title.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbl_Title.ForeColor = System.Drawing.Color.AliceBlue;
             this.lbl_Title.Location = new System.Drawing.Point(136, 25);
             this.lbl_Title.Name = "lbl_Title";
             this.lbl_Title.Size = new System.Drawing.Size(176, 24);
@@ -76,11 +82,16 @@
             // btn_TourInfo
             // 
             this.btn_TourInfo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_TourInfo.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_TourInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_TourInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_TourInfo.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.btn_TourInfo.Location = new System.Drawing.Point(208, 71);
             this.btn_TourInfo.Name = "btn_TourInfo";
             this.btn_TourInfo.Size = new System.Drawing.Size(68, 46);
             this.btn_TourInfo.TabIndex = 6;
             this.btn_TourInfo.Text = "관광정보";
+            this.btn_TourInfo.UseCustomBackColor = true;
             this.btn_TourInfo.UseSelectable = true;
             this.btn_TourInfo.Click += new System.EventHandler(this.btn_TourInfo_Click);
             // 
@@ -97,11 +108,16 @@
             // btn_benefit
             // 
             this.btn_benefit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_benefit.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_benefit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_benefit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_benefit.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.btn_benefit.Location = new System.Drawing.Point(136, 71);
             this.btn_benefit.Name = "btn_benefit";
             this.btn_benefit.Size = new System.Drawing.Size(68, 46);
             this.btn_benefit.TabIndex = 5;
             this.btn_benefit.Text = "방문혜택";
+            this.btn_benefit.UseCustomBackColor = true;
             this.btn_benefit.UseSelectable = true;
             this.btn_benefit.Click += new System.EventHandler(this.btn_benefit_Click);
             // 

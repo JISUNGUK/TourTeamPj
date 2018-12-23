@@ -14,17 +14,17 @@ namespace TourTeamProject
     {
 
         #region 서버스트링 부분 severStr보고 알아서 붙여 쓸것!
-        string severStr = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/locationBasedList";
-        string serviceKey =
-            "?ServiceKey=" + "es9jiHOYsOYG9C2%2BzmyeSFxtnzPNcWqLMis2T6Ol2mU1rXVIUntZUjLnFo6W%2B5dKu3den7QwTLrY%2FSTg%2Fa%2F%2BCQ%3D%3D";
-        string contentTypeId = "&contentTypeId=" + "&mapX=126.981106&mapY=37.568477";
-        string radius = "&radius=" + "2000";
-        string listYN = "&listYN=" + "Y";
-        string mobileOs = "&MobileOS=" + "ETC";
-        string MobileApp = "&MobileApp=" + "TourAPI3.0_Guide";
-        string arrang = "&arrange=" + "A";                  //  정렬구분 a:제목순 b:조회순 c:수정일 d:생성일순
-        string numofRows = "&numOfRows" + "12";
-        string pageNo = "&pageNo=" + "3"; 
+        //string severStr = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/locationBasedList";
+        //string serviceKey =
+        //    "?ServiceKey=" + "es9jiHOYsOYG9C2%2BzmyeSFxtnzPNcWqLMis2T6Ol2mU1rXVIUntZUjLnFo6W%2B5dKu3den7QwTLrY%2FSTg%2Fa%2F%2BCQ%3D%3D";
+        //string contentTypeId = "&contentTypeId=" + "&mapX=126.981106&mapY=37.568477";
+        //string radius = "&radius=" + "2000";
+        //string listYN = "&listYN=" + "Y";
+        //string mobileOs = "&MobileOS=" + "ETC";
+        //string MobileApp = "&MobileApp=" + "TourAPI3.0_Guide";
+        //string arrang = "&arrange=" + "A";                  //  정렬구분 a:제목순 b:조회순 c:수정일 d:생성일순
+        //string numofRows = "&numOfRows" + "12";
+        //string pageNo = "&pageNo=" + "3"; 
         #endregion
 
         int count = 0;

@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.btn_Region = new System.Windows.Forms.Button();
             this.btn_Total = new System.Windows.Forms.Button();
             this.btn_SerchMap = new System.Windows.Forms.Button();
             this.btn_RecommandPlace = new System.Windows.Forms.Button();
@@ -39,81 +38,80 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.btn_Region = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btn_Region
-            // 
-            this.btn_Region.Location = new System.Drawing.Point(19, 206);
-            this.btn_Region.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btn_Region.Name = "btn_Region";
-            this.btn_Region.Size = new System.Drawing.Size(492, 256);
-            this.btn_Region.TabIndex = 0;
-            this.btn_Region.Text = "지역별 관광정보";
-            this.btn_Region.UseVisualStyleBackColor = true;
-            this.btn_Region.Click += new System.EventHandler(this.btn_Region_Click);
             // 
             // btn_Total
             // 
-            this.btn_Total.Location = new System.Drawing.Point(520, 206);
-            this.btn_Total.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_Total.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_Total.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Total.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_Total.Location = new System.Drawing.Point(25, 259);
             this.btn_Total.Name = "btn_Total";
-            this.btn_Total.Size = new System.Drawing.Size(484, 256);
+            this.btn_Total.Size = new System.Drawing.Size(308, 146);
             this.btn_Total.TabIndex = 1;
             this.btn_Total.Text = "통합검색";
-            this.btn_Total.UseVisualStyleBackColor = true;
+            this.btn_Total.UseVisualStyleBackColor = false;
             this.btn_Total.Click += new System.EventHandler(this.btn_Total_Click);
             // 
             // btn_SerchMap
             // 
-            this.btn_SerchMap.Location = new System.Drawing.Point(19, 472);
-            this.btn_SerchMap.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_SerchMap.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_SerchMap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SerchMap.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_SerchMap.Location = new System.Drawing.Point(339, 107);
             this.btn_SerchMap.Name = "btn_SerchMap";
-            this.btn_SerchMap.Size = new System.Drawing.Size(322, 256);
+            this.btn_SerchMap.Size = new System.Drawing.Size(120, 146);
             this.btn_SerchMap.TabIndex = 3;
             this.btn_SerchMap.Text = "내주변 검색";
-            this.btn_SerchMap.UseVisualStyleBackColor = true;
+            this.btn_SerchMap.UseVisualStyleBackColor = false;
             this.btn_SerchMap.Click += new System.EventHandler(this.btn_SerchMap_Click);
             // 
             // btn_RecommandPlace
             // 
-            this.btn_RecommandPlace.Location = new System.Drawing.Point(350, 472);
-            this.btn_RecommandPlace.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_RecommandPlace.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_RecommandPlace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_RecommandPlace.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_RecommandPlace.Location = new System.Drawing.Point(465, 107);
             this.btn_RecommandPlace.Name = "btn_RecommandPlace";
-            this.btn_RecommandPlace.Size = new System.Drawing.Size(322, 256);
+            this.btn_RecommandPlace.Size = new System.Drawing.Size(114, 146);
             this.btn_RecommandPlace.TabIndex = 4;
             this.btn_RecommandPlace.Text = "추천여행지";
-            this.btn_RecommandPlace.UseVisualStyleBackColor = true;
+            this.btn_RecommandPlace.UseVisualStyleBackColor = false;
             this.btn_RecommandPlace.Click += new System.EventHandler(this.btn_RecommandPlace_Click);
             // 
             // btn_Epillogue
             // 
-            this.btn_Epillogue.Location = new System.Drawing.Point(682, 472);
-            this.btn_Epillogue.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_Epillogue.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_Epillogue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Epillogue.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_Epillogue.Location = new System.Drawing.Point(339, 259);
             this.btn_Epillogue.Name = "btn_Epillogue";
-            this.btn_Epillogue.Size = new System.Drawing.Size(322, 256);
+            this.btn_Epillogue.Size = new System.Drawing.Size(240, 146);
             this.btn_Epillogue.TabIndex = 5;
             this.btn_Epillogue.Text = "내일로 후기";
-            this.btn_Epillogue.UseVisualStyleBackColor = true;
+            this.btn_Epillogue.UseVisualStyleBackColor = false;
             this.btn_Epillogue.Click += new System.EventHandler(this.btn_Epillogue_Click);
             // 
             // btn_MySchduel
             // 
-            this.btn_MySchduel.Location = new System.Drawing.Point(350, 738);
-            this.btn_MySchduel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_MySchduel.BackColor = System.Drawing.Color.DarkOrange;
+            this.btn_MySchduel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_MySchduel.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_MySchduel.Location = new System.Drawing.Point(25, 411);
             this.btn_MySchduel.Name = "btn_MySchduel";
-            this.btn_MySchduel.Size = new System.Drawing.Size(322, 256);
+            this.btn_MySchduel.Size = new System.Drawing.Size(554, 146);
             this.btn_MySchduel.TabIndex = 7;
-            this.btn_MySchduel.Text = "나만의 여행일정 만들기";
-            this.btn_MySchduel.UseVisualStyleBackColor = true;
+            this.btn_MySchduel.Text = "나의 여행일정 만들기";
+            this.btn_MySchduel.UseVisualStyleBackColor = false;
             this.btn_MySchduel.Click += new System.EventHandler(this.btn_MySchduel_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 105);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Location = new System.Drawing.Point(23, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 21);
+            this.label1.Size = new System.Drawing.Size(38, 12);
             this.label1.TabIndex = 11;
             this.label1.Text = "label1";
             // 
@@ -129,13 +127,28 @@
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
+            // btn_Region
+            // 
+            this.btn_Region.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_Region.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_Region.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Region.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_Region.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Region.Location = new System.Drawing.Point(25, 107);
+            this.btn_Region.Name = "btn_Region";
+            this.btn_Region.Size = new System.Drawing.Size(308, 146);
+            this.btn_Region.TabIndex = 0;
+            this.btn_Region.Text = "지역별 관광정보";
+            this.btn_Region.UseVisualStyleBackColor = false;
+            this.btn_Region.Click += new System.EventHandler(this.btn_Region_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(1034, 1048);
+            this.ClientSize = new System.Drawing.Size(618, 599);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_MySchduel);
             this.Controls.Add(this.btn_Epillogue);
@@ -143,11 +156,10 @@
             this.Controls.Add(this.btn_SerchMap);
             this.Controls.Add(this.btn_Total);
             this.Controls.Add(this.btn_Region);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Padding = new System.Windows.Forms.Padding(31, 105, 31, 35);
             this.Text = "박스접는상권";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);

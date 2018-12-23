@@ -386,7 +386,7 @@ namespace TourTeamProject
             {
                 Stream stream = response.GetResponseStream();
                 StreamReader sr = new StreamReader(stream);
-                json = textBox4.Text = sr.ReadToEnd();
+                
             }
             else
                 json = "json Not found";

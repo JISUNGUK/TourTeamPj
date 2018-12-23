@@ -214,5 +214,8 @@
   <ItemGroup>
     <None Include="Resources\연결.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\스케쥴.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
