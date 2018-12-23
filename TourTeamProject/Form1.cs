@@ -57,13 +57,20 @@ namespace TourTeamProject
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            this.Visible = false;
+            if (this.WindowState==FormWindowState.Minimized)
+            {
+                this.Visible = false;
+                this.ShowIcon = false;
+                notifyIcon1.Visible = true;
+                
+            }
             
         }
-
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             this.Visible = true;
+            this.ShowIcon = true;
+            notifyIcon1.Visible = false;
         }
 
         private void btn_SerchMap_Click(object sender, EventArgs e)
@@ -105,6 +112,27 @@ namespace TourTeamProject
         {
             RecommendCourse rcs = new RecommendCourse();
             rcs.Show();
+
+        }
+
+
+
+        private void ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show(((ToolStripMenuItem)sender).Text);
+            if (((ToolStripMenuItem)sender).Text=="열기")
+            {
+                notifyIcon1_MouseDoubleClick(null, null);
+            }
+            else if (((ToolStripMenuItem)sender).Text == "프로그램정보")
+            {
+                FrmInfo form = new FrmInfo();
+                form.Show();
+            }
+            else if(((ToolStripMenuItem)sender).Text == "종료")
+            {
+                Application.Exit();
+            }
 
         }
     }

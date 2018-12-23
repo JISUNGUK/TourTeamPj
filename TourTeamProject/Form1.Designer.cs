@@ -38,7 +38,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.열기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.프로그램정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.종료ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Region = new System.Windows.Forms.Button();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Total
@@ -46,7 +52,7 @@
             this.btn_Total.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btn_Total.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Total.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_Total.Location = new System.Drawing.Point(25, 259);
+            this.btn_Total.Location = new System.Drawing.Point(18, 249);
             this.btn_Total.Name = "btn_Total";
             this.btn_Total.Size = new System.Drawing.Size(308, 146);
             this.btn_Total.TabIndex = 1;
@@ -59,7 +65,7 @@
             this.btn_SerchMap.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btn_SerchMap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SerchMap.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_SerchMap.Location = new System.Drawing.Point(339, 107);
+            this.btn_SerchMap.Location = new System.Drawing.Point(332, 97);
             this.btn_SerchMap.Name = "btn_SerchMap";
             this.btn_SerchMap.Size = new System.Drawing.Size(120, 146);
             this.btn_SerchMap.TabIndex = 3;
@@ -72,7 +78,7 @@
             this.btn_RecommandPlace.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btn_RecommandPlace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_RecommandPlace.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_RecommandPlace.Location = new System.Drawing.Point(465, 107);
+            this.btn_RecommandPlace.Location = new System.Drawing.Point(458, 97);
             this.btn_RecommandPlace.Name = "btn_RecommandPlace";
             this.btn_RecommandPlace.Size = new System.Drawing.Size(114, 146);
             this.btn_RecommandPlace.TabIndex = 4;
@@ -85,7 +91,7 @@
             this.btn_Epillogue.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btn_Epillogue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Epillogue.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_Epillogue.Location = new System.Drawing.Point(339, 259);
+            this.btn_Epillogue.Location = new System.Drawing.Point(332, 249);
             this.btn_Epillogue.Name = "btn_Epillogue";
             this.btn_Epillogue.Size = new System.Drawing.Size(240, 146);
             this.btn_Epillogue.TabIndex = 5;
@@ -98,7 +104,7 @@
             this.btn_MySchduel.BackColor = System.Drawing.Color.DarkOrange;
             this.btn_MySchduel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_MySchduel.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_MySchduel.Location = new System.Drawing.Point(25, 411);
+            this.btn_MySchduel.Location = new System.Drawing.Point(18, 401);
             this.btn_MySchduel.Name = "btn_MySchduel";
             this.btn_MySchduel.Size = new System.Drawing.Size(554, 146);
             this.btn_MySchduel.TabIndex = 7;
@@ -109,7 +115,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 71);
+            this.label1.Location = new System.Drawing.Point(23, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 12);
             this.label1.TabIndex = 11;
@@ -122,10 +128,46 @@
             // 
             // notifyIcon1
             // 
+            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.Text = "TourSystem";
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.열기ToolStripMenuItem,
+            this.프로그램정보ToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.종료ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(147, 76);
+            // 
+            // 열기ToolStripMenuItem
+            // 
+            this.열기ToolStripMenuItem.Name = "열기ToolStripMenuItem";
+            this.열기ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.열기ToolStripMenuItem.Text = "열기";
+            this.열기ToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            // 
+            // 프로그램정보ToolStripMenuItem
+            // 
+            this.프로그램정보ToolStripMenuItem.Name = "프로그램정보ToolStripMenuItem";
+            this.프로그램정보ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.프로그램정보ToolStripMenuItem.Text = "프로그램정보";
+            this.프로그램정보ToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
+            // 
+            // 종료ToolStripMenuItem
+            // 
+            this.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem";
+            this.종료ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.종료ToolStripMenuItem.Text = "종료";
+            this.종료ToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
             // 
             // btn_Region
             // 
@@ -134,7 +176,7 @@
             this.btn_Region.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Region.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_Region.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Region.Location = new System.Drawing.Point(25, 107);
+            this.btn_Region.Location = new System.Drawing.Point(18, 97);
             this.btn_Region.Name = "btn_Region";
             this.btn_Region.Size = new System.Drawing.Size(308, 146);
             this.btn_Region.TabIndex = 0;
@@ -148,7 +190,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(618, 599);
+            this.ClientSize = new System.Drawing.Size(594, 563);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_MySchduel);
             this.Controls.Add(this.btn_Epillogue);
@@ -160,9 +202,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "박스접는상권";
+            this.Text = "떠나요";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,6 +222,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 열기ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 프로그램정보ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem 종료ToolStripMenuItem;
     }
 }
 
