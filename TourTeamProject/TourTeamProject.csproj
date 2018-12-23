@@ -195,6 +195,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SJW\IntegratedSearch.resx">
+      <DependentUpon>IntegratedSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SJW\Naviweb.resx">
+      <DependentUpon>Naviweb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SJW\RecommendCourse.resx">
+      <DependentUpon>RecommendCourse.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
