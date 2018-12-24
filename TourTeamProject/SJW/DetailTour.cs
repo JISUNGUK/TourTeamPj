@@ -36,14 +36,7 @@ namespace TourTeamProject
 
         private void addrLabel_Click(object sender, EventArgs e)
         {
-            if (addrLabel.Text != "주소:없음")
-            {
-                Naviweb nw = new Naviweb();
-                nw.Address = "www.google.co.kr/maps/search/"+address;
-                nw.Mapx = mapx;
-                nw.Mapy = mapy;
-                nw.Show();
-            }
+            
         }
        
 
@@ -52,18 +45,28 @@ namespace TourTeamProject
         public string Address { get => address; set => address = value; }
         public string Mapx { get => mapx; set => mapx = value; }
         public string Mapy { get => mapy; set => mapy = value; }
-       
+
+        private void linkedLabel_Click(object sender, EventArgs e)
+        {
+            if (linkedLabel.Text != "")
+            {
+                Naviweb nw = new Naviweb();
+                nw.Address = "www.google.co.kr/maps/search/" + address;
+                nw.Mapx = mapx;
+                nw.Mapy = mapy;
+                nw.Show();
+            }
+
+        }
 
         private void DetailTour_Load(object sender, EventArgs e)
         {
-            addrLabel.MouseEnter += AddrLabel_MouseEnter;
+            linkedLabel.MouseEnter += linkedLabel_MouseEnter;
             if (address != null)
             {
                 t1 = new ToolTip();
                 t1.Active = true;
-                t1.AutoPopDelay = 1;
-                addrLabel.BackColor = Color.Aqua;
-                
+                t1.AutoPopDelay = 1;                              
             }
 
             string path = url + servicekey + "&contentTypeId=" + contentpid + "&contentId=" + contentid + endurl;
@@ -87,7 +90,7 @@ namespace TourTeamProject
             if (jitem["zipcode"] != null)
                 PostLabel.Text = "우편번호:" + jitem["zipcode"].ToString();
             if (jitem["addr1"] != null)
-                addrLabel.Text = "주소:" + jitem["addr1"].ToString();
+                linkedLabel.Text = "주소:" + jitem["addr1"].ToString();
 
 
 
@@ -95,11 +98,11 @@ namespace TourTeamProject
 
         }
 
-        private void AddrLabel_MouseEnter(object sender, EventArgs e)
+        private void linkedLabel_MouseEnter(object sender, EventArgs e)
         {
            if(t1!=null)
             {                
-                t1.Show("해당 주소의 지도로 이동합니다",addrLabel,1000);
+                t1.Show("해당 주소의 지도로 이동합니다", linkedLabel, 1000);
             }
             
         }

@@ -63,7 +63,7 @@
             this.label1.Location = new System.Drawing.Point(41, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(341, 50);
+            this.label1.Size = new System.Drawing.Size(195, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "추천여행 코스";
             // 
@@ -75,11 +75,11 @@
             this.groupBox1.Controls.Add(this.radioHealing);
             this.groupBox1.Controls.Add(this.aloneCourse);
             this.groupBox1.Controls.Add(this.radioFamily);
-            this.groupBox1.Location = new System.Drawing.Point(607, 88);
+            this.groupBox1.Location = new System.Drawing.Point(248, 90);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.groupBox1.Size = new System.Drawing.Size(852, 163);
+            this.groupBox1.Size = new System.Drawing.Size(311, 119);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "코스목록";
@@ -87,10 +87,10 @@
             // TasteCouse
             // 
             this.TasteCouse.AutoSize = true;
-            this.TasteCouse.Location = new System.Drawing.Point(622, 100);
+            this.TasteCouse.Location = new System.Drawing.Point(218, 93);
             this.TasteCouse.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.TasteCouse.Name = "TasteCouse";
-            this.TasteCouse.Size = new System.Drawing.Size(63, 17);
+            this.TasteCouse.Size = new System.Drawing.Size(59, 15);
             this.TasteCouse.TabIndex = 10;
             this.TasteCouse.TabStop = true;
             this.TasteCouse.Text = "맛코스";
@@ -100,10 +100,10 @@
             // campingCouse
             // 
             this.campingCouse.AutoSize = true;
-            this.campingCouse.Location = new System.Drawing.Point(325, 100);
+            this.campingCouse.Location = new System.Drawing.Point(108, 93);
             this.campingCouse.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.campingCouse.Name = "campingCouse";
-            this.campingCouse.Size = new System.Drawing.Size(76, 17);
+            this.campingCouse.Size = new System.Drawing.Size(71, 15);
             this.campingCouse.TabIndex = 11;
             this.campingCouse.TabStop = true;
             this.campingCouse.Text = "캠핑코스";
@@ -113,10 +113,10 @@
             // walkingCourse
             // 
             this.walkingCourse.AutoSize = true;
-            this.walkingCourse.Location = new System.Drawing.Point(48, 100);
+            this.walkingCourse.Location = new System.Drawing.Point(12, 93);
             this.walkingCourse.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.walkingCourse.Name = "walkingCourse";
-            this.walkingCourse.Size = new System.Drawing.Size(76, 17);
+            this.walkingCourse.Size = new System.Drawing.Size(71, 15);
             this.walkingCourse.TabIndex = 12;
             this.walkingCourse.TabStop = true;
             this.walkingCourse.Text = "도보코스";
@@ -125,10 +125,10 @@
             // radioHealing
             // 
             this.radioHealing.AutoSize = true;
-            this.radioHealing.Location = new System.Drawing.Point(622, 38);
+            this.radioHealing.Location = new System.Drawing.Point(218, 41);
             this.radioHealing.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.radioHealing.Name = "radioHealing";
-            this.radioHealing.Size = new System.Drawing.Size(76, 17);
+            this.radioHealing.Size = new System.Drawing.Size(71, 15);
             this.radioHealing.TabIndex = 9;
             this.radioHealing.TabStop = true;
             this.radioHealing.Text = "힐링코스";
@@ -137,10 +137,10 @@
             // aloneCourse
             // 
             this.aloneCourse.AutoSize = true;
-            this.aloneCourse.Location = new System.Drawing.Point(325, 38);
+            this.aloneCourse.Location = new System.Drawing.Point(108, 41);
             this.aloneCourse.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.aloneCourse.Name = "aloneCourse";
-            this.aloneCourse.Size = new System.Drawing.Size(89, 17);
+            this.aloneCourse.Size = new System.Drawing.Size(83, 15);
             this.aloneCourse.TabIndex = 8;
             this.aloneCourse.TabStop = true;
             this.aloneCourse.Text = "나홀로코스";
@@ -151,10 +151,10 @@
             // 
             this.radioFamily.AutoSize = true;
             this.radioFamily.Checked = true;
-            this.radioFamily.Location = new System.Drawing.Point(48, 41);
+            this.radioFamily.Location = new System.Drawing.Point(12, 41);
             this.radioFamily.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.radioFamily.Name = "radioFamily";
-            this.radioFamily.Size = new System.Drawing.Size(76, 17);
+            this.radioFamily.Size = new System.Drawing.Size(71, 15);
             this.radioFamily.TabIndex = 7;
             this.radioFamily.TabStop = true;
             this.radioFamily.Text = "가족코스";
@@ -166,7 +166,7 @@
             this.searchKeyword.Location = new System.Drawing.Point(6, 88);
             this.searchKeyword.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.searchKeyword.Name = "searchKeyword";
-            this.searchKeyword.Size = new System.Drawing.Size(431, 34);
+            this.searchKeyword.Size = new System.Drawing.Size(191, 23);
             this.searchKeyword.TabIndex = 2;
             this.searchKeyword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.searchKeyword_KeyUp);
             // 
@@ -196,8 +196,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.Tourgridview1);
-            this.splitContainer1.Size = new System.Drawing.Size(1722, 918);
-            this.splitContainer1.SplitterDistance = 215;
+            this.splitContainer1.Size = new System.Drawing.Size(662, 431);
+            this.splitContainer1.SplitterDistance = 213;
             this.splitContainer1.SplitterWidth = 8;
             this.splitContainer1.TabIndex = 7;
             // 
@@ -210,7 +210,7 @@
             "20",
             "50",
             "100"});
-            this.RowNum.Location = new System.Drawing.Point(607, 15);
+            this.RowNum.Location = new System.Drawing.Point(248, 15);
             this.RowNum.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.RowNum.Name = "RowNum";
             this.RowNum.Size = new System.Drawing.Size(221, 29);
@@ -220,10 +220,10 @@
             // 
             // btnLast
             // 
-            this.btnLast.Location = new System.Drawing.Point(451, 179);
+            this.btnLast.Location = new System.Drawing.Point(155, 110);
             this.btnLast.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(139, 44);
+            this.btnLast.Size = new System.Drawing.Size(42, 44);
             this.btnLast.Style = MetroFramework.MetroColorStyle.White;
             this.btnLast.TabIndex = 48;
             this.btnLast.Text = "끝";
@@ -233,10 +233,10 @@
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(301, 179);
+            this.btnNext.Location = new System.Drawing.Point(108, 110);
             this.btnNext.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(139, 44);
+            this.btnNext.Size = new System.Drawing.Size(48, 44);
             this.btnNext.Style = MetroFramework.MetroColorStyle.White;
             this.btnNext.TabIndex = 49;
             this.btnNext.Text = "다음";
@@ -247,7 +247,7 @@
             // pageNum
             // 
             this.pageNum.AutoSize = true;
-            this.pageNum.Location = new System.Drawing.Point(1250, 18);
+            this.pageNum.Location = new System.Drawing.Point(487, 66);
             this.pageNum.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.pageNum.Name = "pageNum";
             this.pageNum.Size = new System.Drawing.Size(72, 19);
@@ -257,7 +257,7 @@
             // totalpgNum
             // 
             this.totalpgNum.AutoSize = true;
-            this.totalpgNum.Location = new System.Drawing.Point(1047, 18);
+            this.totalpgNum.Location = new System.Drawing.Point(487, 15);
             this.totalpgNum.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.totalpgNum.Name = "totalpgNum";
             this.totalpgNum.Size = new System.Drawing.Size(72, 19);
@@ -266,10 +266,10 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(457, 88);
+            this.btnSearch.Location = new System.Drawing.Point(209, 88);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(139, 44);
+            this.btnSearch.Size = new System.Drawing.Size(39, 41);
             this.btnSearch.TabIndex = 46;
             this.btnSearch.Text = "검색";
             this.btnSearch.UseSelectable = true;
@@ -278,7 +278,7 @@
             // currentPage
             // 
             this.currentPage.AutoSize = true;
-            this.currentPage.Location = new System.Drawing.Point(871, 15);
+            this.currentPage.Location = new System.Drawing.Point(248, 49);
             this.currentPage.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.currentPage.Name = "currentPage";
             this.currentPage.Size = new System.Drawing.Size(58, 19);
@@ -287,10 +287,10 @@
             // 
             // btnPreview
             // 
-            this.btnPreview.Location = new System.Drawing.Point(150, 179);
+            this.btnPreview.Location = new System.Drawing.Point(64, 110);
             this.btnPreview.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnPreview.Name = "btnPreview";
-            this.btnPreview.Size = new System.Drawing.Size(139, 44);
+            this.btnPreview.Size = new System.Drawing.Size(46, 44);
             this.btnPreview.Style = MetroFramework.MetroColorStyle.White;
             this.btnPreview.TabIndex = 47;
             this.btnPreview.Text = "이전";
@@ -300,10 +300,10 @@
             // 
             // btnFirst
             // 
-            this.btnFirst.Location = new System.Drawing.Point(6, 179);
+            this.btnFirst.Location = new System.Drawing.Point(6, 110);
             this.btnFirst.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(134, 44);
+            this.btnFirst.Size = new System.Drawing.Size(57, 44);
             this.btnFirst.Style = MetroFramework.MetroColorStyle.White;
             this.btnFirst.TabIndex = 45;
             this.btnFirst.Text = "처음";
@@ -321,15 +321,15 @@
             this.Tourgridview1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Tourgridview1.Name = "Tourgridview1";
             this.Tourgridview1.RowTemplate.Height = 23;
-            this.Tourgridview1.Size = new System.Drawing.Size(1722, 695);
+            this.Tourgridview1.Size = new System.Drawing.Size(662, 210);
             this.Tourgridview1.TabIndex = 6;
             this.Tourgridview1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Tourgridview1_CellClick);
             // 
             // RecommendCourse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1796, 1071);
+            this.ClientSize = new System.Drawing.Size(736, 584);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("굴림", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);

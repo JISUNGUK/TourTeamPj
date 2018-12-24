@@ -169,8 +169,8 @@ namespace TourTeamProject
                     DataTable dt = new DataTable("tourPlace");
                     DataColumn dTitle = new DataColumn("제목");
                     DataColumn dAddress = new DataColumn("주소");
-                    DataColumn dxPosition = new DataColumn("위도");
-                    DataColumn dyPosition = new DataColumn("경도");
+                    //DataColumn dxPosition = new DataColumn("위도");
+                   // DataColumn dyPosition = new DataColumn("경도");
                     DataColumn dTel = new DataColumn("번호");
                     DataColumn dZip = new DataColumn("우편번호");
                     DataColumn dHomepage = new DataColumn("홈페이지");
@@ -178,8 +178,8 @@ namespace TourTeamProject
 
                     dt.Columns.Add(dTitle);
                     dt.Columns.Add(dAddress);
-                    dt.Columns.Add(dxPosition);
-                    dt.Columns.Add(dyPosition);
+                    //dt.Columns.Add(dxPosition);
+                    //dt.Columns.Add(dyPosition);
                     dt.Columns.Add(dTel);
                     dt.Columns.Add(new DataColumn("이미지", System.Type.GetType("System.Byte[]", true, true)));
                     int nullcount = 0;
@@ -189,10 +189,10 @@ namespace TourTeamProject
                         DataRow dr = dt.NewRow();
                         dr[0] = v.Title;
                         dr[1] = v.Address;
-                        dr[2] = v.Mapx;
-                        dr[3] = v.Mapy;
-                        dr[4] = v.Tel;
-                        dr[5] = displayImage(v.Imageurl);
+                        //dr[2] = v.Mapx;
+                        //dr[3] = v.Mapy;
+                        dr[2] = v.Tel;
+                        dr[3] = displayImage(v.Imageurl);
 
 
                         dt.Rows.Add(dr);
@@ -227,7 +227,7 @@ namespace TourTeamProject
             dgv.DataSource = GetTourTable(searchword);
             if (dgv.DataSource != null)
             {
-                dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                //dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                 dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 dgv.AutoSize = true;
 
