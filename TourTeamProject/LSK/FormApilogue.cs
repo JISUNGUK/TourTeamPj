@@ -114,7 +114,7 @@ namespace TourTeamProject
             {
                 if (item.Title == listBlog[e.RowIndex].Title || item.Bloggername == listBlog[e.RowIndex].Bloggername)
                 {
-                    System.Diagnostics.Process.Start(item.Bloggerlink + "/" + item.Link.Remove(0, item.Link.IndexOf("?") + 24));
+                   System.Diagnostics.Process.Start(item.Bloggerlink + "/" + item.Link.Remove(0, item.Link.IndexOf("?") + 24));  
                 }
             }
         }

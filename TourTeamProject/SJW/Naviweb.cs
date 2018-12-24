@@ -31,7 +31,23 @@ namespace TourTeamProject
 
         private void Naviweb_Load(object sender, EventArgs e)
         {
-            InitWebbrowser("www.google.co.kr/maps/search/"+address);
+            System.Windows.Forms.Timer tr = new System.Windows.Forms.Timer();
+            tr.Enabled = true;
+            tr.Tick += Tr_Tick;
+            InitWebbrowser(address);
+        }
+
+        private void Tr_Tick(object sender, EventArgs e)
+        {
+            if(webView1.Url.Contains("/@"))
+                {
+                searchKeyword.Text = webView1.Url;
+                webPage.WebView = webView1;
+                int latitude = searchKeyword.Text.IndexOf("/@");
+                int altitude = searchKeyword.Text.IndexOf("z/");
+                latitudeText.Text = searchKeyword.Text.Substring(latitude + 2, altitude - latitude - 1);
+                location = latitudeText.Text;
+            }
         }
 
         /// <summary>

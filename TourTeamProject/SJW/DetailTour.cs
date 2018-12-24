@@ -16,6 +16,7 @@ namespace TourTeamProject
 {
     public partial class DetailTour : MetroForm
     {
+        ToolTip t1;
         private string contentid, contentpid, address;
         private string servicekey = "7V8bwwI0r4itRyj%2BK9kCFfFaFV5sv7alU9slMR%2FGEbZBiRwf1lkOkEq%2Fn0eR%2FXwckcRZq2xCyV4nnbYzzaGYRg%3D%3D";
         private string url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon?ServiceKey=";
@@ -26,6 +27,7 @@ namespace TourTeamProject
         public DetailTour()
         {
             InitializeComponent();
+            
         }
 
         public string Contentid { get => contentid; set => contentid = value; }
@@ -37,12 +39,13 @@ namespace TourTeamProject
             if (addrLabel.Text != "주소:없음")
             {
                 Naviweb nw = new Naviweb();
-                nw.Address = address;
+                nw.Address = "www.google.co.kr/maps/search/"+address;
                 nw.Mapx = mapx;
                 nw.Mapy = mapy;
                 nw.Show();
             }
         }
+       
 
 
 
@@ -53,6 +56,15 @@ namespace TourTeamProject
 
         private void DetailTour_Load(object sender, EventArgs e)
         {
+            addrLabel.MouseEnter += AddrLabel_MouseEnter;
+            if (address != null)
+            {
+                t1 = new ToolTip();
+                t1.Active = true;
+                t1.AutoPopDelay = 1;
+                addrLabel.BackColor = Color.Aqua;
+                
+            }
 
             string path = url + servicekey + "&contentTypeId=" + contentpid + "&contentId=" + contentid + endurl;
             HttpWebRequest hw = (HttpWebRequest)WebRequest.Create(path);
@@ -81,6 +93,15 @@ namespace TourTeamProject
 
 
 
+        }
+
+        private void AddrLabel_MouseEnter(object sender, EventArgs e)
+        {
+           if(t1!=null)
+            {                
+                t1.Show("해당 주소의 지도로 이동합니다",addrLabel,1000);
+            }
+            
         }
     }
 }

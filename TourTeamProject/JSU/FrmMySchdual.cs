@@ -303,6 +303,7 @@ namespace TourTeamProject
             
             this.metroTabPage3.DrawToBitmap(bmp, new Rectangle(0, 0, this.metroTabPage3.Width, this.metroTabPage3.Height));
             SaveFileDialog open1 = new SaveFileDialog();
+            open1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif";
             if(DialogResult.OK==open1.ShowDialog())
             { 
             bmp.Save(open1.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);

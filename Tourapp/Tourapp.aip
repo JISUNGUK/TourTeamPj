@@ -30,10 +30,10 @@
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="Manufacturer" Value="Your Company"/>
-    <ROW Property="ProductCode" Value="1033:{8EB8A5C3-3225-47F2-8CA3-4AE236D9ED1F} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{4416FF01-79EA-45C5-B9A5-D32332625EB6} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
-    <ROW Property="ProductName" Value="TourappFinal"/>
-    <ROW Property="ProductVersion" Value="1.0.0" Type="32"/>
+    <ROW Property="ProductName" Value="LeavingFor"/>
+    <ROW Property="ProductVersion" Value="1.0.2" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{6863395A-C4C4-49C5-9EB4-5A92777DEC3C}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>

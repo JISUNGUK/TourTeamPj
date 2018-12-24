@@ -93,7 +93,7 @@ namespace TourTeamProject
 
             MessageBox.Show(xyCode[0]+"\n"+ xyCode[1]);
 
-            txt_Point.Text = "X 좌표 : " + xyCode[1] + " Y좌표 : " + xyCode[1];
+            //txt_Point.Text = "X 좌표 : " + xyCode[1] + " Y좌표 : " + xyCode[1];
             
             return xyCode;
         }
@@ -386,7 +386,7 @@ namespace TourTeamProject
             {
                 Stream stream = response.GetResponseStream();
                 StreamReader sr = new StreamReader(stream);
-                
+                json = sr.ReadToEnd();
             }
             else
                 json = "json Not found";
