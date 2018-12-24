@@ -38,6 +38,8 @@ namespace TourTeamProject
             {
                 Naviweb nw = new Naviweb();
                 nw.Address = address;
+                nw.Mapx = mapx;
+                nw.Mapy = mapy;
                 nw.Show();
             }
         }
@@ -47,6 +49,7 @@ namespace TourTeamProject
         public string Address { get => address; set => address = value; }
         public string Mapx { get => mapx; set => mapx = value; }
         public string Mapy { get => mapy; set => mapy = value; }
+       
 
         private void DetailTour_Load(object sender, EventArgs e)
         {

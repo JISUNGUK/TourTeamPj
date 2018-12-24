@@ -301,6 +301,8 @@ namespace TourTeamProject
             DetailTour dt = new DetailTour();
             dt.Contentid = contentid;
             dt.Contentpid = contentpid;
+            dt.Mapx = mapx;
+            dt.Mapy = mapy;
             dt.Address = address;
             dt.Show();
 

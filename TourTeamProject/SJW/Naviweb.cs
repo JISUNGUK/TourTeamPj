@@ -31,7 +31,7 @@ namespace TourTeamProject
 
         private void Naviweb_Load(object sender, EventArgs e)
         {
-            InitWebbrowser("www.google.co.kr/maps/search/"+"@"+mapx+","+mapy);
+            InitWebbrowser("www.google.co.kr/maps/search/"+address);
         }
 
         /// <summary>
@@ -42,37 +42,36 @@ namespace TourTeamProject
         public void InitWebbrowser(string url)
         {
             nv = webView1.LoadUrl("https://" + url);
-            if (webView1.CanGoBack)
-                btnBack.Enabled = true;
-            else
-                btnBack.Enabled = false;
-            if (webView1.CanGoForward)
-                btnForward.Enabled = true;
-            else
-                btnForward.Enabled = false;
-            webPage.WebView = webView1;
-           /* if (url.Contains("www.google.co.kr/maps/search"))
-            {
-                while (true)
-                {
-                    MessageBox.Show("로딩중:" + webView1.Url);
-                    if (webView1.Url.Contains("/@"))
-                    {
-                        searchKeyword.Text = webView1.Url;
-                        webPage.WebView = webView1;
-                        int latitude = searchKeyword.Text.IndexOf("/@");
-                        int altitude = searchKeyword.Text.IndexOf("z/");
-                        latitudeText.Text = searchKeyword.Text.Substring(latitude + 2, altitude - latitude - 1);
-                        location = latitudeText.Text;
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                webPage.WebView = webView1;
-            }*/
+            
 
+             if (url.Contains("www.google.co.kr/maps/search"))
+             {
+                latitudeText.Text = "위도:" + mapx + "경도:" + mapy;
+                /* while (true)
+                 {
+                    searchKeyword.Text=webView1.Url;
+                    webPage.WebView = webView1;
+                    MessageBox.Show("로딩중:" + webView1.Url);
+                     if (webView1.Url.Contains("/@"))
+                     {
+                         searchKeyword.Text = webView1.Url;
+                         webPage.WebView = webView1;
+                         int latitude = searchKeyword.Text.IndexOf("/@");
+                         int altitude = searchKeyword.Text.IndexOf("z/");
+                         latitudeText.Text = searchKeyword.Text.Substring(latitude + 2, altitude - latitude - 1);
+                         location = latitudeText.Text;
+                         break;
+                     }
+                 }*/
+                webPage.WebView = webView1;
+                searchKeyword.Text = url;
+            }
+             else
+             {
+                 webPage.WebView = webView1;
+             }
+
+            
 
         }
 
@@ -83,18 +82,49 @@ namespace TourTeamProject
                 InitWebbrowser(searchKeyword.Text);
             }
 
+            if (webView1.CanGoBack)
+                btnBack.Enabled = true;
+            else
+                btnBack.Enabled = false;
+            if (webView1.CanGoForward)
+                btnForward.Enabled = true;
+            else
+                btnForward.Enabled = false;
+
+            
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             webView1.GoBack();
             webPage.WebView = webView1;
+
+            if (webView1.CanGoBack)
+                btnBack.Enabled = true;
+            else
+                btnBack.Enabled = false;
+            if (webView1.CanGoForward)
+                btnForward.Enabled = true;
+            else
+                btnForward.Enabled = false;
         }
 
         private void btnForward_Click(object sender, EventArgs e)
         {
             webView1.GoForward();
             webPage.WebView = webView1;
+
+            if (webView1.CanGoBack)
+                btnBack.Enabled = true;
+            else
+                btnBack.Enabled = false;
+            if (webView1.CanGoForward)
+                btnForward.Enabled = true;
+            else
+                btnForward.Enabled = false;
+
+
         }
 
 
