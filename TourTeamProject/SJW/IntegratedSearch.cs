@@ -229,6 +229,7 @@ namespace TourTeamProject
             {
                 //dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                 dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                dgv.AllowUserToResizeColumns = true;
                 dgv.AutoSize = true;
 
             }

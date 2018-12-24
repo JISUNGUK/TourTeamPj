@@ -75,11 +75,11 @@
             this.groupBox1.Controls.Add(this.radioHealing);
             this.groupBox1.Controls.Add(this.aloneCourse);
             this.groupBox1.Controls.Add(this.radioFamily);
-            this.groupBox1.Location = new System.Drawing.Point(248, 90);
+            this.groupBox1.Location = new System.Drawing.Point(260, 77);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.groupBox1.Size = new System.Drawing.Size(311, 119);
+            this.groupBox1.Size = new System.Drawing.Size(299, 114);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "코스목록";
@@ -197,7 +197,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.Tourgridview1);
             this.splitContainer1.Size = new System.Drawing.Size(662, 431);
-            this.splitContainer1.SplitterDistance = 213;
+            this.splitContainer1.SplitterDistance = 204;
             this.splitContainer1.SplitterWidth = 8;
             this.splitContainer1.TabIndex = 7;
             // 
@@ -210,10 +210,10 @@
             "20",
             "50",
             "100"});
-            this.RowNum.Location = new System.Drawing.Point(248, 15);
+            this.RowNum.Location = new System.Drawing.Point(260, 15);
             this.RowNum.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.RowNum.Name = "RowNum";
-            this.RowNum.Size = new System.Drawing.Size(221, 29);
+            this.RowNum.Size = new System.Drawing.Size(209, 29);
             this.RowNum.TabIndex = 7;
             this.RowNum.UseSelectable = true;
             this.RowNum.SelectedIndexChanged += new System.EventHandler(this.RowNum_SelectedIndexChanged);
@@ -247,7 +247,7 @@
             // pageNum
             // 
             this.pageNum.AutoSize = true;
-            this.pageNum.Location = new System.Drawing.Point(487, 66);
+            this.pageNum.Location = new System.Drawing.Point(487, 34);
             this.pageNum.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.pageNum.Name = "pageNum";
             this.pageNum.Size = new System.Drawing.Size(72, 19);
@@ -278,7 +278,7 @@
             // currentPage
             // 
             this.currentPage.AutoSize = true;
-            this.currentPage.Location = new System.Drawing.Point(248, 49);
+            this.currentPage.Location = new System.Drawing.Point(487, 53);
             this.currentPage.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.currentPage.Name = "currentPage";
             this.currentPage.Size = new System.Drawing.Size(58, 19);
@@ -321,7 +321,7 @@
             this.Tourgridview1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Tourgridview1.Name = "Tourgridview1";
             this.Tourgridview1.RowTemplate.Height = 23;
-            this.Tourgridview1.Size = new System.Drawing.Size(662, 210);
+            this.Tourgridview1.Size = new System.Drawing.Size(662, 219);
             this.Tourgridview1.TabIndex = 6;
             this.Tourgridview1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Tourgridview1_CellClick);
             // 

@@ -79,8 +79,8 @@
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.Controls.Add(this.tourGridview);
-            this.splitContainer1.Size = new System.Drawing.Size(817, 384);
-            this.splitContainer1.SplitterDistance = 192;
+            this.splitContainer1.Size = new System.Drawing.Size(824, 348);
+            this.splitContainer1.SplitterDistance = 152;
             this.splitContainer1.SplitterWidth = 8;
             this.splitContainer1.TabIndex = 0;
             this.splitContainer1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.splitContainer1_Scroll);
@@ -227,7 +227,7 @@
             this.tourGridview.ReadOnly = true;
             this.tourGridview.RowTemplate.Height = 23;
             this.tourGridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tourGridview.Size = new System.Drawing.Size(817, 184);
+            this.tourGridview.Size = new System.Drawing.Size(824, 188);
             this.tourGridview.TabIndex = 0;
             this.tourGridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tourGridview_CellClick);
             // 
@@ -235,7 +235,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 537);
+            this.ClientSize = new System.Drawing.Size(898, 501);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("굴림", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
