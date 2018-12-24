@@ -1,4 +1,6 @@
-﻿namespace TourTeamProject
+﻿using System;
+
+namespace TourTeamProject
 {
     partial class newControl
     {
@@ -66,6 +68,7 @@
             this.btn_Fastival.Text = "축제정보";
             this.btn_Fastival.UseCustomBackColor = true;
             this.btn_Fastival.UseSelectable = true;
+            this.btn_Fastival.Click += new System.EventHandler(this.btn_Fastival_Click);
             // 
             // lbl_Title
             // 
@@ -134,6 +137,8 @@
             this.ResumeLayout(false);
 
         }
+
+       
 
         #endregion
 

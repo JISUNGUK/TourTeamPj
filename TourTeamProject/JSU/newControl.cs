@@ -32,7 +32,14 @@ namespace TourTeamProject
         /// </summary>
         private void btn_TourInfo_Click(object sender, EventArgs e)
         {
-            
+            FormTouristInformationByRegion ftb = new FormTouristInformationByRegion();
+            ftb.Show();
+        }
+        private void btn_Fastival_Click(object sender, EventArgs e)
+        {
+            FormTouristInformationByRegion ftb = new FormTouristInformationByRegion();
+            ftb.Show();
+
         }
     }
 }

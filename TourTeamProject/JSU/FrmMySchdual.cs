@@ -129,7 +129,7 @@ namespace TourTeamProject
             }
 
             times[0] = dateTime_Start.Value; times[1] = dateTime_End.Value;
-            lbl_Title.Text =
+            lbl_Tab2Title.Text =
                 String.Format("여행일정 : ({0}) ~ ({1}) ", times[0].ToShortDateString(), times[1].ToShortDateString());
 
             MakeSchdual();
@@ -302,9 +302,12 @@ namespace TourTeamProject
             Bitmap bmp = new Bitmap(this.metroTabPage3.Width, this.metroTabPage3.Height);
             
             this.metroTabPage3.DrawToBitmap(bmp, new Rectangle(0, 0, this.metroTabPage3.Width, this.metroTabPage3.Height));
-            
-            bmp.Save("Print.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
-            
+            SaveFileDialog open1 = new SaveFileDialog();
+            if(DialogResult.OK==open1.ShowDialog())
+            { 
+            bmp.Save(open1.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
+
             //pictureBox1.Image = bmp;
 
             //SaveFileDialog save = new SaveFileDialog();
