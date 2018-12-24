@@ -84,6 +84,7 @@
             this.Controls.Add(this.BtnNext);
             this.Controls.Add(this.BtnPrev);
             this.Controls.Add(this.dataGridView1);
+            this.MaximizeBox = false;
             this.Name = "FormApilogue";
             this.Text = "여행후기";
             this.Load += new System.EventHandler(this.FormApilogue_Load);

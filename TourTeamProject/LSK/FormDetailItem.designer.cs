@@ -150,6 +150,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 547);
             this.Controls.Add(this.tabControl1);
+            this.MaximizeBox = false;
             this.Name = "FormDetailItem";
             this.Text = "FormDetailItem";
             this.Load += new System.EventHandler(this.FormDetailItem_Load);
