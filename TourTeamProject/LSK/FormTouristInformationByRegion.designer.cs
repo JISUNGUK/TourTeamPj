@@ -238,6 +238,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "FormTouristInformationByRegion";
             this.Text = "지역별 관광정보";
             this.Load += new System.EventHandler(this.FormTouristInformationByRegion_Load);

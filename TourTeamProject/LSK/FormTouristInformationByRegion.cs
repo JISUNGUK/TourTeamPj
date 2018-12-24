@@ -1669,7 +1669,7 @@ namespace TourTeamProject
             listView1.Clear();
             listTourSk.Clear();
             listView1.View = View.LargeIcon;
-            
+
             int index = 0;
 
             //인증키 : 70i7ZBjwMhQcgYsy9HnYEEXv%2FXQ5MxlEHeHcsNd17WY8r%2Fl57uRYryqyC93hdqLDj5WgQ5GwgvA0pgV9sCKcAQ%3D%3D
@@ -1694,116 +1694,112 @@ namespace TourTeamProject
                 totalPage = Int32.Parse(jsonObject["totalCount"].ToString()) / 12;
             }
 
-            try
-            {
-                jsonObject = JObject.Parse(jsonObject["items"].ToString());
-            }
-            catch (Exception)
+            if (Int32.Parse(jsonObject["totalCount"].ToString()) < 1)
             {
                 MessageBox.Show("정보가 존재하지 않습니다.");
-                return;
             }
-            JArray jsonArray = JArray.Parse(jsonObject["item"].ToString());
-
-            ImageList imageList = new ImageList();
-            imageList.ImageSize = new Size(180, 118);
-            imageList.ColorDepth = ColorDepth.Depth32Bit;
-            listView1.LargeImageList = imageList;
-
-            foreach (var item in jsonArray)
+            else if (Int32.Parse(jsonObject["totalCount"].ToString()) == 1)
             {
+                jsonObject = JObject.Parse(jsonObject["items"].ToString());
+                jsonObject = JObject.Parse(jsonObject["item"].ToString());
+
+                ImageList imageList = new ImageList();
+                imageList.ImageSize = new Size(180, 118);
+                imageList.ColorDepth = ColorDepth.Depth32Bit;
+                listView1.LargeImageList = imageList;
+
                 TourSk TourSk = new TourSk();
                 Image preview;
 
-                if (item["addr1"] != null)
+                if (jsonObject["addr1"] != null)
                 {
-                    TourSk.Addr1 = item["addr1"].ToString();
+                    TourSk.Addr1 = jsonObject["addr1"].ToString();
                 }
-                if (item["addr2"] != null)
+                if (jsonObject["addr2"] != null)
                 {
-                    TourSk.Addr2 = item["addr2"].ToString();
+                    TourSk.Addr2 = jsonObject["addr2"].ToString();
                 }
-                if (item["areacode"] != null)
+                if (jsonObject["areacode"] != null)
                 {
-                    TourSk.Areacode = Int32.Parse(item["areacode"].ToString());
+                    TourSk.Areacode = Int32.Parse(jsonObject["areacode"].ToString());
                 }
-                if (item["cat1"] != null)
+                if (jsonObject["cat1"] != null)
                 {
-                    TourSk.Cat1 = item["cat1"].ToString();
+                    TourSk.Cat1 = jsonObject["cat1"].ToString();
                 }
-                if (item["cat2"] != null)
+                if (jsonObject["cat2"] != null)
                 {
-                    TourSk.Cat2 = item["cat2"].ToString();
+                    TourSk.Cat2 = jsonObject["cat2"].ToString();
                 }
-                if (item["cat3"] != null)
+                if (jsonObject["cat3"] != null)
                 {
-                    TourSk.Cat3 = item["cat3"].ToString();
+                    TourSk.Cat3 = jsonObject["cat3"].ToString();
                 }
-                if (item["contentid"] != null)
+                if (jsonObject["contentid"] != null)
                 {
-                    TourSk.Contentid = item["contentid"].ToString();
+                    TourSk.Contentid = jsonObject["contentid"].ToString();
                 }
-                if (item["contenttypeid"] != null)
+                if (jsonObject["contenttypeid"] != null)
                 {
-                    TourSk.Contenttypeid = Int32.Parse(item["contenttypeid"].ToString());
+                    TourSk.Contenttypeid = Int32.Parse(jsonObject["contenttypeid"].ToString());
                 }
-                if (item["createdtime"] != null)
+                if (jsonObject["createdtime"] != null)
                 {
-                    TourSk.Createdtime = new DateTime(Int32.Parse(item["createdtime"].ToString().Remove(4)), Int32.Parse(item["createdtime"].ToString().Remove(0, 4).Remove(2)), Int32.Parse(item["createdtime"].ToString().Remove(0, 6).Remove(2)));
+                    TourSk.Createdtime = new DateTime(Int32.Parse(jsonObject["createdtime"].ToString().Remove(4)), Int32.Parse(jsonObject["createdtime"].ToString().Remove(0, 4).Remove(2)), Int32.Parse(jsonObject["createdtime"].ToString().Remove(0, 6).Remove(2)));
                 }
-                if (item["firstimage"] != null)
+                if (jsonObject["firstimage"] != null)
                 {
-                    TourSk.Firstimage = item["firstimage"].ToString();
+                    TourSk.Firstimage = jsonObject["firstimage"].ToString();
                 }
-                if (item["firstimage2"] != null)
+                if (jsonObject["firstimage2"] != null)
                 {
-                    TourSk.Firstimage2 = item["firstimage2"].ToString();
-                    preview = Image.FromStream(GetImage(item["firstimage2"].ToString()));
+                    TourSk.Firstimage2 = jsonObject["firstimage2"].ToString();
+                    preview = Image.FromStream(GetImage(jsonObject["firstimage2"].ToString()));
                 }
                 else
                 {
                     preview = Image.FromStream(GetImage("http://mplaza.co.kr/images/no_photo/car.gif"));
                 }
-                if (item["mapx"] != null)
+                if (jsonObject["mapx"] != null)
                 {
-                    TourSk.Mapx = Double.Parse(item["mapx"].ToString());
+                    TourSk.Mapx = Double.Parse(jsonObject["mapx"].ToString());
                 }
-                if (item["mapy"] != null)
+                if (jsonObject["mapy"] != null)
                 {
-                    TourSk.Mapy = Double.Parse(item["mapy"].ToString());
+                    TourSk.Mapy = Double.Parse(jsonObject["mapy"].ToString());
                 }
-                if (item["mlevel"] != null)
+                if (jsonObject["mlevel"] != null)
                 {
-                    TourSk.Mlevel = Int32.Parse(item["mlevel"].ToString());
+                    TourSk.Mlevel = Int32.Parse(jsonObject["mlevel"].ToString());
                 }
-                if (item["modifiedtime"] != null)
+                if (jsonObject["modifiedtime"] != null)
                 {
-                    TourSk.Modifiedtime = new DateTime(Int32.Parse(item["modifiedtime"].ToString().Remove(4)), Int32.Parse(item["modifiedtime"].ToString().Remove(0, 4).Remove(2)), Int32.Parse(item["modifiedtime"].ToString().Remove(0, 6).Remove(2)));
+                    TourSk.Modifiedtime = new DateTime(Int32.Parse(jsonObject["modifiedtime"].ToString().Remove(4)), Int32.Parse(jsonObject["modifiedtime"].ToString().Remove(0, 4).Remove(2)), Int32.Parse(jsonObject["modifiedtime"].ToString().Remove(0, 6).Remove(2)));
                 }
-                if (item["readcount"] != null)
+                if (jsonObject["readcount"] != null)
                 {
-                    TourSk.Readcount = Int32.Parse(item["readcount"].ToString());
+                    TourSk.Readcount = Int32.Parse(jsonObject["readcount"].ToString());
                 }
-                if (item["sigungucode"] != null)
+                if (jsonObject["sigungucode"] != null)
                 {
-                    TourSk.Sigungucode = Int32.Parse(item["sigungucode"].ToString());
+                    TourSk.Sigungucode = Int32.Parse(jsonObject["sigungucode"].ToString());
                 }
-                if (item["tel"] != null)
+                if (jsonObject["tel"] != null)
                 {
-                    TourSk.Tel = item["tel"].ToString();
+                    TourSk.Tel = jsonObject["tel"].ToString();
                 }
-                if (item["title"] != null)
+                if (jsonObject["title"] != null)
                 {
-                    TourSk.Title = item["title"].ToString();
+                    TourSk.Title = jsonObject["title"].ToString();
                 }
-                if (item["zipcode"] != null)
+                if (jsonObject["zipcode"] != null)
                 {
-                    TourSk.Zipcode = item["zipcode"].ToString();
+                    TourSk.Zipcode = jsonObject["zipcode"].ToString();
                 }
 
                 imageList.Images.Add(preview);
 
-                ListViewItem viewItem = new ListViewItem(item["title"].ToString());
+                ListViewItem viewItem = new ListViewItem(jsonObject["title"].ToString());
                 viewItem.ImageIndex = index;
                 listView1.Items.Add(viewItem);
 
@@ -1811,10 +1807,121 @@ namespace TourTeamProject
 
                 index++;
             }
-            
+            else
+            {
+                jsonObject = JObject.Parse(jsonObject["items"].ToString());
+
+                JArray jsonArray = JArray.Parse(jsonObject["item"].ToString());
+
+                ImageList imageList = new ImageList();
+                imageList.ImageSize = new Size(180, 118);
+                imageList.ColorDepth = ColorDepth.Depth32Bit;
+                listView1.LargeImageList = imageList;
+
+                foreach (var item in jsonArray)
+                {
+                    TourSk TourSk = new TourSk();
+                    Image preview;
+
+                    if (item["addr1"] != null)
+                    {
+                        TourSk.Addr1 = item["addr1"].ToString();
+                    }
+                    if (item["addr2"] != null)
+                    {
+                        TourSk.Addr2 = item["addr2"].ToString();
+                    }
+                    if (item["areacode"] != null)
+                    {
+                        TourSk.Areacode = Int32.Parse(item["areacode"].ToString());
+                    }
+                    if (item["cat1"] != null)
+                    {
+                        TourSk.Cat1 = item["cat1"].ToString();
+                    }
+                    if (item["cat2"] != null)
+                    {
+                        TourSk.Cat2 = item["cat2"].ToString();
+                    }
+                    if (item["cat3"] != null)
+                    {
+                        TourSk.Cat3 = item["cat3"].ToString();
+                    }
+                    if (item["contentid"] != null)
+                    {
+                        TourSk.Contentid = item["contentid"].ToString();
+                    }
+                    if (item["contenttypeid"] != null)
+                    {
+                        TourSk.Contenttypeid = Int32.Parse(item["contenttypeid"].ToString());
+                    }
+                    if (item["createdtime"] != null)
+                    {
+                        TourSk.Createdtime = new DateTime(Int32.Parse(item["createdtime"].ToString().Remove(4)), Int32.Parse(item["createdtime"].ToString().Remove(0, 4).Remove(2)), Int32.Parse(item["createdtime"].ToString().Remove(0, 6).Remove(2)));
+                    }
+                    if (item["firstimage"] != null)
+                    {
+                        TourSk.Firstimage = item["firstimage"].ToString();
+                    }
+                    if (item["firstimage2"] != null)
+                    {
+                        TourSk.Firstimage2 = item["firstimage2"].ToString();
+                        preview = Image.FromStream(GetImage(item["firstimage2"].ToString()));
+                    }
+                    else
+                    {
+                        preview = Image.FromStream(GetImage("http://mplaza.co.kr/images/no_photo/car.gif"));
+                    }
+                    if (item["mapx"] != null)
+                    {
+                        TourSk.Mapx = Double.Parse(item["mapx"].ToString());
+                    }
+                    if (item["mapy"] != null)
+                    {
+                        TourSk.Mapy = Double.Parse(item["mapy"].ToString());
+                    }
+                    if (item["mlevel"] != null)
+                    {
+                        TourSk.Mlevel = Int32.Parse(item["mlevel"].ToString());
+                    }
+                    if (item["modifiedtime"] != null)
+                    {
+                        TourSk.Modifiedtime = new DateTime(Int32.Parse(item["modifiedtime"].ToString().Remove(4)), Int32.Parse(item["modifiedtime"].ToString().Remove(0, 4).Remove(2)), Int32.Parse(item["modifiedtime"].ToString().Remove(0, 6).Remove(2)));
+                    }
+                    if (item["readcount"] != null)
+                    {
+                        TourSk.Readcount = Int32.Parse(item["readcount"].ToString());
+                    }
+                    if (item["sigungucode"] != null)
+                    {
+                        TourSk.Sigungucode = Int32.Parse(item["sigungucode"].ToString());
+                    }
+                    if (item["tel"] != null)
+                    {
+                        TourSk.Tel = item["tel"].ToString();
+                    }
+                    if (item["title"] != null)
+                    {
+                        TourSk.Title = item["title"].ToString();
+                    }
+                    if (item["zipcode"] != null)
+                    {
+                        TourSk.Zipcode = item["zipcode"].ToString();
+                    }
+
+                    imageList.Images.Add(preview);
+
+                    ListViewItem viewItem = new ListViewItem(item["title"].ToString());
+                    viewItem.ImageIndex = index;
+                    listView1.Items.Add(viewItem);
+
+                    listTourSk.Add(TourSk);
+
+                    index++;
+                }
+            }
             label5.Text = currentPage + " / " + totalPage;
         }
-
         private void BtnPrev_Click(object sender, EventArgs e)
         {
             if (currentPage - 1 > 0)
@@ -1852,7 +1959,7 @@ namespace TourTeamProject
                         FormDetailItem fdi = new FormDetailItem(item);
                         fdi.Text = item.Title;
                         fdi.ShowDialog();
-                        
+
                         return;
                     }
                 }
