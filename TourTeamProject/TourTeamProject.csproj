@@ -195,6 +195,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SJW\DetailTour.resx">
+      <DependentUpon>DetailTour.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SJW\IntegratedSearch.resx">
       <DependentUpon>IntegratedSearch.cs</DependentUpon>
     </EmbeddedResource>

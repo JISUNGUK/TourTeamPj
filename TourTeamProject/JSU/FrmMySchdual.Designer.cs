@@ -428,6 +428,8 @@
             this.Controls.Add(this.btn_ShowSchdual);
             this.Controls.Add(this.btn_Clear);
             this.Controls.Add(this.tabControl);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmMySchdual";
             this.Text = "여행일정 만들기";
             this.Load += new System.EventHandler(this.FrmMySchdual_Load);

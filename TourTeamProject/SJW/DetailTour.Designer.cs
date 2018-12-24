@@ -31,10 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.result = new System.Windows.Forms.TextBox();
             this.Title = new System.Windows.Forms.Label();
-            this.PlacePIc = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.PostLabel = new System.Windows.Forms.Label();
             this.addrLabel = new System.Windows.Forms.Label();
+            this.PlacePIc = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PlacePIc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,17 +65,6 @@
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(0, 28);
             this.Title.TabIndex = 2;
-            // 
-            // PlacePIc
-            // 
-            this.PlacePIc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PlacePIc.Image = global::TourTeamProject.Properties.Resources.no_detail_img;
-            this.PlacePIc.Location = new System.Drawing.Point(31, 76);
-            this.PlacePIc.Name = "PlacePIc";
-            this.PlacePIc.Size = new System.Drawing.Size(432, 335);
-            this.PlacePIc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PlacePIc.TabIndex = 3;
-            this.PlacePIc.TabStop = false;
             // 
             // label2
             // 
@@ -108,6 +97,17 @@
             this.addrLabel.TabIndex = 6;
             this.addrLabel.Text = "주소:없음";
             this.addrLabel.Click += new System.EventHandler(this.addrLabel_Click);
+            // 
+            // PlacePIc
+            // 
+            this.PlacePIc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PlacePIc.Image = global::TourTeamProject.Properties.Resources.no_detail_img;
+            this.PlacePIc.Location = new System.Drawing.Point(31, 76);
+            this.PlacePIc.Name = "PlacePIc";
+            this.PlacePIc.Size = new System.Drawing.Size(432, 335);
+            this.PlacePIc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PlacePIc.TabIndex = 3;
+            this.PlacePIc.TabStop = false;
             // 
             // DetailTour
             // 

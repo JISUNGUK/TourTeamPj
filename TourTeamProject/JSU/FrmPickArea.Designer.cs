@@ -360,6 +360,8 @@
             this.Controls.Add(this.btn_Cancle);
             this.Controls.Add(this.gridView);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPickArea";
             this.Text = "여행지를 선택하세요";
             this.MouseLeave += new System.EventHandler(this.FrmPickArea_MouseLeave);
