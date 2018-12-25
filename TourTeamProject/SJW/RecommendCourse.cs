@@ -66,7 +66,7 @@ namespace TourTeamProject
             IR = new IntegratedSearch();
             IR.NumofRows = numRow;
             IR.PageCount = pageNo;
-            IR.DisplayResult(Tourgridview1, sr.ReadToEnd());
+            IR.DisplayResult(dv_Place, sr.ReadToEnd());
             //MessageBox.Show(sr.ReadToEnd());
             pageNum.Text = "검색건수:" + IR.TotalCount;
             currentPage.Text = "현재 쪽:" + IR.PageCount;
@@ -124,17 +124,7 @@ namespace TourTeamProject
 
         private void Tourgridview1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (Tourgridview1.CurrentRow.Index > -1)
-            {
-                string contentid = TourLIST[Tourgridview1.CurrentRow.Index].Contentid;
-                string contentpid = TourLIST[Tourgridview1.CurrentRow.Index].Contenttypeid;
-
-                DetailTour dt = new DetailTour();
-                dt.Contentid = contentid;
-                dt.Contentpid = contentpid;
-                dt.Show();
-
-            }
+            
         }
 
         private void btnFirst_Click(object sender, EventArgs e)
@@ -208,6 +198,22 @@ namespace TourTeamProject
                 pageNo = 1;
                 DisplayResult();
             }
+        }
+
+        private void dv_Place_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dv_Place.CurrentRow.Index > -1)
+            {
+                string contentid = TourLIST[dv_Place.CurrentRow.Index].Contentid;
+                string contentpid = TourLIST[dv_Place.CurrentRow.Index].Contenttypeid;
+
+                DetailTour dt = new DetailTour();
+                dt.Contentid = contentid;
+                dt.Contentpid = contentpid;
+                dt.Show();
+
+            }
+
         }
     }
 }

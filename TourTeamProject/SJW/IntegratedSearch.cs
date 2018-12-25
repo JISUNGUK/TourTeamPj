@@ -70,7 +70,7 @@ namespace TourTeamProject
         {
             PageCount = 1;
             string json = jsonParse(searchKeyword.Text);
-            DisplayResult(tourGridview, json);
+            DisplayResult(dv_Place, json);
         }
         /// <summary>
         /// json출력결과를 받아서 해당 데이터로 된 데이터테이블을 반환시켜줌
@@ -98,7 +98,7 @@ namespace TourTeamProject
                 if (totalCount > 0)
                 {
                     TourList.Clear();
-                    tourGridview.DataSource = null;
+                    dv_Place.DataSource = null;
                     JObject jr = JObject.Parse(JB["items"].ToString());
 
                     if (totalCount != 1)
@@ -171,7 +171,7 @@ namespace TourTeamProject
                     DataColumn dAddress = new DataColumn("주소");
                     //DataColumn dxPosition = new DataColumn("위도");
                    // DataColumn dyPosition = new DataColumn("경도");
-                    DataColumn dTel = new DataColumn("번호");
+                    DataColumn dTel = new DataColumn("전화번호");
                     DataColumn dZip = new DataColumn("우편번호");
                     DataColumn dHomepage = new DataColumn("홈페이지");
 
@@ -294,18 +294,7 @@ namespace TourTeamProject
 
         private void tourGridview_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string contentid = TourList[tourGridview.CurrentRow.Index].Contentid;
-            string contentpid = TourList[tourGridview.CurrentRow.Index].Contenttypeid;
-            string address = TourList[tourGridview.CurrentRow.Index].Address;
-            string mapx = TourList[tourGridview.CurrentRow.Index].Mapx;
-            string mapy= TourList[tourGridview.CurrentRow.Index].Mapy;
-            DetailTour dt = new DetailTour();
-            dt.Contentid = contentid;
-            dt.Contentpid = contentpid;
-            dt.Mapx = mapx;
-            dt.Mapy = mapy;
-            dt.Address = address;
-            dt.Show();
+            
 
         }
 
@@ -346,7 +335,7 @@ namespace TourTeamProject
         {
             PageCount = 1;
             string json = jsonParse(searchKeyword.Text);
-            DisplayResult(tourGridview, json);
+            DisplayResult(dv_Place, json);
 
         }
 
@@ -355,7 +344,7 @@ namespace TourTeamProject
             if (PageCount > 1)
             {
                 PageCount--;
-                DisplayResult(tourGridview, jsonParse(searchKeyword.Text));
+                DisplayResult(dv_Place, jsonParse(searchKeyword.Text));
             }
             else
                 MessageBox.Show("첫번째 페이지입니다");
@@ -367,7 +356,7 @@ namespace TourTeamProject
             if (PageCount != TotalPageNum)
             {
                 PageCount++;
-                DisplayResult(tourGridview, jsonParse(searchKeyword.Text));
+                DisplayResult(dv_Place, jsonParse(searchKeyword.Text));
             }
             else
                 MessageBox.Show("마지막 페이지입니다");
@@ -388,7 +377,7 @@ namespace TourTeamProject
             {
                 PageCount = 1;
                 string json = jsonParse(searchKeyword.Text);
-                DisplayResult(tourGridview, json);
+                DisplayResult(dv_Place, json);
 
             }
         }
@@ -399,10 +388,27 @@ namespace TourTeamProject
             {
                 PageCount = TotalPageNum;
                 string json = jsonParse(searchKeyword.Text);
-                DisplayResult(tourGridview, json);
+                DisplayResult(dv_Place, json);
             }
             else
                 MessageBox.Show("마지막 페이지입니다");
+
+        }
+
+        private void dv_Place_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string contentid = TourList[dv_Place.CurrentRow.Index].Contentid;
+            string contentpid = TourList[dv_Place.CurrentRow.Index].Contenttypeid;
+            string address = TourList[dv_Place.CurrentRow.Index].Address;
+            string mapx = TourList[dv_Place.CurrentRow.Index].Mapx;
+            string mapy = TourList[dv_Place.CurrentRow.Index].Mapy;
+            DetailTour dt = new DetailTour();
+            dt.Contentid = contentid;
+            dt.Contentpid = contentpid;
+            dt.Mapx = mapx;
+            dt.Mapy = mapy;
+            dt.Address = address;
+            dt.Show();
 
         }
     }

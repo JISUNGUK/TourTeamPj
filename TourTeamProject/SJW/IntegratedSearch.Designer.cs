@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.RowNum = new MetroFramework.Controls.MetroComboBox();
             this.totalpgNum = new MetroFramework.Controls.MetroLabel();
@@ -42,13 +45,13 @@
             this.resultLbl = new System.Windows.Forms.Label();
             this.searchResult = new System.Windows.Forms.TextBox();
             this.searchKeyword = new System.Windows.Forms.TextBox();
-            this.tourGridview = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.dv_Place = new MetroFramework.Controls.MetroGrid();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tourGridview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dv_Place)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -78,9 +81,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
-            this.splitContainer1.Panel2.Controls.Add(this.tourGridview);
-            this.splitContainer1.Size = new System.Drawing.Size(824, 348);
-            this.splitContainer1.SplitterDistance = 152;
+            this.splitContainer1.Panel2.Controls.Add(this.dv_Place);
+            this.splitContainer1.Size = new System.Drawing.Size(824, 456);
+            this.splitContainer1.SplitterDistance = 199;
             this.splitContainer1.SplitterWidth = 8;
             this.splitContainer1.TabIndex = 0;
             this.splitContainer1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.splitContainer1_Scroll);
@@ -193,7 +196,7 @@
             this.resultLbl.Location = new System.Drawing.Point(577, 136);
             this.resultLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.resultLbl.Name = "resultLbl";
-            this.resultLbl.Size = new System.Drawing.Size(73, 14);
+            this.resultLbl.Size = new System.Drawing.Size(119, 24);
             this.resultLbl.TabIndex = 40;
             this.resultLbl.Text = "검색건수:";
             // 
@@ -212,30 +215,70 @@
             this.searchKeyword.Location = new System.Drawing.Point(155, 46);
             this.searchKeyword.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.searchKeyword.Name = "searchKeyword";
-            this.searchKeyword.Size = new System.Drawing.Size(324, 23);
+            this.searchKeyword.Size = new System.Drawing.Size(324, 34);
             this.searchKeyword.TabIndex = 38;
             this.searchKeyword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.searchKeyword_KeyUp);
             // 
-            // tourGridview
+            // dv_Place
             // 
-            this.tourGridview.AllowUserToAddRows = false;
-            this.tourGridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tourGridview.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tourGridview.Location = new System.Drawing.Point(0, 0);
-            this.tourGridview.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.tourGridview.Name = "tourGridview";
-            this.tourGridview.ReadOnly = true;
-            this.tourGridview.RowTemplate.Height = 23;
-            this.tourGridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tourGridview.Size = new System.Drawing.Size(824, 188);
-            this.tourGridview.TabIndex = 0;
-            this.tourGridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tourGridview_CellClick);
+            this.dv_Place.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuPopup;
+            this.dv_Place.AllowUserToAddRows = false;
+            this.dv_Place.AllowUserToDeleteRows = false;
+            this.dv_Place.AllowUserToResizeColumns = false;
+            this.dv_Place.AllowUserToResizeRows = false;
+            this.dv_Place.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dv_Place.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dv_Place.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dv_Place.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dv_Place.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dv_Place.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dv_Place.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dv_Place.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dv_Place.EnableHeadersVisualStyles = false;
+            this.dv_Place.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dv_Place.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dv_Place.Location = new System.Drawing.Point(0, 0);
+            this.dv_Place.Margin = new System.Windows.Forms.Padding(5);
+            this.dv_Place.Name = "dv_Place";
+            this.dv_Place.ReadOnly = true;
+            this.dv_Place.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dv_Place.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dv_Place.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dv_Place.RowTemplate.Height = 23;
+            this.dv_Place.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dv_Place.ShowCellErrors = false;
+            this.dv_Place.ShowRowErrors = false;
+            this.dv_Place.Size = new System.Drawing.Size(824, 249);
+            this.dv_Place.Style = MetroFramework.MetroColorStyle.Blue;
+            this.dv_Place.TabIndex = 10;
+            this.dv_Place.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dv_Place_CellClick);
             // 
             // IntegratedSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 501);
+            this.ClientSize = new System.Drawing.Size(898, 609);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("굴림", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -248,7 +291,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tourGridview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dv_Place)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -259,7 +302,6 @@
         private System.Windows.Forms.Label resultLbl;
         private System.Windows.Forms.TextBox searchResult;
         private System.Windows.Forms.TextBox searchKeyword;
-        private System.Windows.Forms.DataGridView tourGridview;
         private MetroFramework.Controls.MetroButton btnPreview;
         private MetroFramework.Controls.MetroButton btnSearch;
         private MetroFramework.Controls.MetroButton btnFirst;
@@ -270,5 +312,6 @@
         private MetroFramework.Controls.MetroButton btnLast;
         private MetroFramework.Controls.MetroButton btnNext;
         private System.Windows.Forms.ToolTip toolTip1;
+        private MetroFramework.Controls.MetroGrid dv_Place;
     }
 }
