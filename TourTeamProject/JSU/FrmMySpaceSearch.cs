@@ -47,13 +47,18 @@ namespace TourTeamProject
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
+           DisplayResult(txt_Point.Text);
+        }
+
+        public void DisplayResult(string position)
+        {
             dv_Place.DataSource = null;
             list.Clear();
             // 좌표입력이 있다면
-            
-            if (txt_Point.Text != string.Empty)
+
+            if (position != string.Empty)
             {
-                string[] xyCode = XYConvert(txt_Point.Text);
+                string[] xyCode = XYConvert(position);
 
                 mapX = "&mapX=" + xyCode[1]; mapY = "&mapY=" + xyCode[0]; radius = "&radius=" + txt_Radius.Text;
             }

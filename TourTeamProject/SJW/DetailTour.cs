@@ -48,13 +48,11 @@ namespace TourTeamProject
 
         private void linkedLabel_Click(object sender, EventArgs e)
         {
-            if (linkedLabel.Text != "")
+            if (linkedLabel.Text != "주소:없음")
             {
                 Naviweb nw = new Naviweb();
-                nw.Address = "www.google.co.kr/maps/search/" + address;
-                nw.Mapx = mapx;
-                nw.Mapy = mapy;
-                nw.Show();
+                nw.Address = "www.google.co.kr/maps/search/" + address;       nw.Show();  
+              
             }
 
         }

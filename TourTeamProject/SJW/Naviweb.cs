@@ -135,7 +135,10 @@ namespace TourTeamProject
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-
+            FrmMySpaceSearch fms = new FrmMySpaceSearch();
+            fms.DisplayResult(latitudeText.Text);
+            fms.Show();
+            
         }
     }
 }

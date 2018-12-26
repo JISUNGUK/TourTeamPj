@@ -67,7 +67,7 @@ namespace TourTeamProject
             IR.NumofRows = numRow;
             IR.PageCount = pageNo;
             IR.DisplayResult(dv_Place, sr.ReadToEnd());
-            //MessageBox.Show(sr.ReadToEnd());
+            MessageBox.Show(sr.ReadToEnd());
             pageNum.Text = "검색건수:" + IR.TotalCount;
             currentPage.Text = "현재 쪽:" + IR.PageCount;
             pageNo = IR.PageCount;

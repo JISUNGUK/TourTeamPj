@@ -104,10 +104,10 @@
             this.linkedLabel.Font = new System.Drawing.Font("돋움", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.linkedLabel.Location = new System.Drawing.Point(487, 276);
             this.linkedLabel.Name = "linkedLabel";
-            this.linkedLabel.Size = new System.Drawing.Size(94, 21);
+            this.linkedLabel.Size = new System.Drawing.Size(101, 21);
             this.linkedLabel.TabIndex = 8;
             this.linkedLabel.TabStop = true;
-            this.linkedLabel.Text = "linkLabel2";
+            this.linkedLabel.Text = "주소:없음";
             this.linkedLabel.Click += new System.EventHandler(this.linkedLabel_Click);
             // 
             // DetailTour
