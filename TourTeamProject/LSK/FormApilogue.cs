@@ -19,7 +19,6 @@ namespace TourTeamProject
 
         string keyWord = String.Empty; // 네이버 블로그의 내일로후기의 키워드입니다.
         List<Blog> listBlog = new List<Blog>();
-        DataTable blogTable;
         int currentPage = 0;
         int totalPage = 0;
 
@@ -31,33 +30,26 @@ namespace TourTeamProject
         private void FormApilogue_Load(object sender, EventArgs e)
         {
             listBlog.Clear();
+            panel1.Controls.Clear();
 
             keyWord = String.Empty;
             keyWord = ConvertKeyword("내일로여행후기");
             string jsonStr = GetJson(keyWord);
             JObject jObject = JObject.Parse(jsonStr);
-            
-            if ((Int32.Parse(jObject["total"].ToString()) % 12) != 0)
+
+            if ((Int32.Parse(jObject["total"].ToString()) % 8) != 0)
             {
-                totalPage = Int32.Parse(jObject["total"].ToString()) / 12 + 1;
+                totalPage = Int32.Parse(jObject["total"].ToString()) / 8 + 1;
             }
             else
             {
-                totalPage = Int32.Parse(jObject["total"].ToString()) / 12;
+                totalPage = Int32.Parse(jObject["total"].ToString()) / 8;
             }
-            
-            JArray jArray = JArray.Parse(jObject["items"].ToString());
 
-            blogTable = new DataTable();
-            DataColumn titleColumn = new DataColumn("제목", Type.GetType("System.String"));
-            blogTable.Columns.Add(titleColumn);
-            DataColumn bloggerNameColumn = new DataColumn("블로거", Type.GetType("System.String"));
-            blogTable.Columns.Add(bloggerNameColumn);
+            JArray jArray = JArray.Parse(jObject["items"].ToString());
 
             foreach (JObject item in jArray)
             {
-                DataRow blogRow = blogTable.NewRow();
-
                 Blog blog = new Blog
                 {
                     Title = item["title"].ToString().Replace("<b>", "").Replace("</b>", ""),
@@ -65,26 +57,88 @@ namespace TourTeamProject
                     Description = item["description"].ToString().Replace("<b>", "").Replace("</b>", ""),
                     Bloggername = item["bloggername"].ToString(),
                     Bloggerlink = item["bloggerlink"].ToString(),
-                    Postdate = new DateTime(Int32.Parse(item["postdate"].ToString().Remove(4)), Int32.Parse(item["postdate"].ToString().Remove(0,4).Remove(2)), Int32.Parse(item["postdate"].ToString().Remove(0,6)))
+                    Postdate = new DateTime(Int32.Parse(item["postdate"].ToString().Remove(4)), Int32.Parse(item["postdate"].ToString().Remove(0, 4).Remove(2)), Int32.Parse(item["postdate"].ToString().Remove(0, 6)))
                 };
 
-                blogRow["제목"] = item["title"].ToString().Replace("<b>", "").Replace("</b>", "");
-                blogRow["블로거"] = item["bloggername"].ToString();
-
-                blogTable.Rows.Add(blogRow);
                 listBlog.Add(blog);
             }
 
-            label1.Text = currentPage + 1 + " / " + totalPage;
+            Apilogue icon = new Apilogue(listBlog);
 
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = blogTable;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            for (int i = 0; i < listBlog.Count; i++)
+            {
+                switch (i)
+                {
+                    case 0:
+                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername);
+                        icon.Location = new Point(12, 0);
+                        panel1.Controls.Add(icon);
+                        icon.Click += Icon_Click;
+                        break;
+                    case 1:
+                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername);
+                        icon.Location = new Point(307, 0);
+                        panel1.Controls.Add(icon);
+                        icon.Click += Icon_Click;
+                        break;
+                    case 2:
+                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername);
+                        icon.Location = new Point(12, 165);
+                        panel1.Controls.Add(icon);
+                        icon.Click += Icon_Click;
+                        break;
+                    case 3:
+                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername);
+                        icon.Location = new Point(307, 165);
+                        panel1.Controls.Add(icon);
+                        icon.Click += Icon_Click;
+                        break;
+                    case 4:
+                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername);
+                        icon.Location = new Point(12, 330);
+                        panel1.Controls.Add(icon);
+                        icon.Click += Icon_Click;
+                        break;
+                    case 5:
+                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername);
+                        icon.Location = new Point(307, 330);
+                        panel1.Controls.Add(icon);
+                        icon.Click += Icon_Click;
+                        break;
+                    case 6:
+                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername);
+                        icon.Location = new Point(12, 495);
+                        panel1.Controls.Add(icon);
+                        icon.Click += Icon_Click;
+                        break;
+                    case 7:
+                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername);
+                        icon.Location = new Point(307, 495);
+                        panel1.Controls.Add(icon);
+                        icon.Click += Icon_Click;
+                        break;
+                }
+            }
+
+            label1.Text = currentPage + 1 + " / " + totalPage;
+        }
+
+        private void Icon_Click(object sender, EventArgs e)
+        {
+            Apilogue ap = (Apilogue)sender;
+
+            foreach (Blog item in listBlog)
+            {
+                if (ap.LblTitle.Text == item.Title || ap.LblBloggerName.Text == item.Bloggername)
+                {
+                    System.Diagnostics.Process.Start(item.Bloggerlink + "/" + item.Link.Remove(0, item.Link.IndexOf("?") + 24));
+                }
+            }
         }
 
         private void BtnPrev_Click(object sender, EventArgs e)
         {
-            if (currentPage -1 > -1)
+            if (currentPage - 1 > -1)
             {
                 currentPage -= 1;
                 FormApilogue_Load(null, null);
@@ -108,24 +162,13 @@ namespace TourTeamProject
             }
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            foreach (Blog item in listBlog)
-            {
-                if (item.Title == listBlog[e.RowIndex].Title || item.Bloggername == listBlog[e.RowIndex].Bloggername)
-                {
-                   System.Diagnostics.Process.Start(item.Bloggerlink + "/" + item.Link.Remove(0, item.Link.IndexOf("?") + 24));  
-                }
-            }
-        }
-
         /// <summary>
         /// 네이버 블로그api를 이용하여 Json문자열을 반환하는 메서드입니다.
         /// </summary>
         /// <returns></returns>
         private string GetJson(string keyWord)
         {
-            string requestUrl = "https://openapi.naver.com/v1/search/blog.json?query=" + keyWord + "&display=12&start=" + (currentPage * 12 + 1);
+            string requestUrl = "https://openapi.naver.com/v1/search/blog.json?query=" + keyWord + "&display=8&start=" + (currentPage * 8 + 1);
             string clientId = "CEgB42FcMMsE9do22Tp9";
             string clientSecret = "0Mmepr2xkB";
 
