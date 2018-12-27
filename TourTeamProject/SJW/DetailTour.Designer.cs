@@ -115,7 +115,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(721, 737);
+            this.ClientSize = new System.Drawing.Size(725, 737);
             this.Controls.Add(this.linkedLabel);
             this.Controls.Add(this.PostLabel);
             this.Controls.Add(this.label2);

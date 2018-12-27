@@ -230,5 +230,29 @@
   <ItemGroup>
     <None Include="Resources\스케쥴.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\다운로드.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\47px-Search_Noun_project_15028.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_320735.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location2-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-1559935_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat-comment-feedback-review-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55856_79175_443.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55856_79175_4431.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

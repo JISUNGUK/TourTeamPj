@@ -30,202 +30,295 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.btn_Total = new System.Windows.Forms.Button();
-            this.btn_SerchMap = new System.Windows.Forms.Button();
-            this.btn_RecommandPlace = new System.Windows.Forms.Button();
-            this.btn_Epillogue = new System.Windows.Forms.Button();
-            this.btn_MySchduel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.열기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.프로그램정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.종료ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_Region = new System.Windows.Forms.Button();
-            this.contextMenuStrip1.SuspendLayout();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.metroTile2 = new MetroFramework.Controls.MetroTile();
+            this.metroTile3 = new MetroFramework.Controls.MetroTile();
+            this.metroTile4 = new MetroFramework.Controls.MetroTile();
+            this.metroTile5 = new MetroFramework.Controls.MetroTile();
+            this.metroTile6 = new MetroFramework.Controls.MetroTile();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.metroTile1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_Total
-            // 
-            this.btn_Total.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_Total.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Total.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_Total.Location = new System.Drawing.Point(18, 249);
-            this.btn_Total.Name = "btn_Total";
-            this.btn_Total.Size = new System.Drawing.Size(308, 146);
-            this.btn_Total.TabIndex = 1;
-            this.btn_Total.Text = "통합검색";
-            this.btn_Total.UseVisualStyleBackColor = false;
-            this.btn_Total.Click += new System.EventHandler(this.btn_Total_Click);
-            // 
-            // btn_SerchMap
-            // 
-            this.btn_SerchMap.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_SerchMap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SerchMap.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_SerchMap.Location = new System.Drawing.Point(332, 97);
-            this.btn_SerchMap.Name = "btn_SerchMap";
-            this.btn_SerchMap.Size = new System.Drawing.Size(120, 146);
-            this.btn_SerchMap.TabIndex = 3;
-            this.btn_SerchMap.Text = "내주변 검색";
-            this.btn_SerchMap.UseVisualStyleBackColor = false;
-            this.btn_SerchMap.Click += new System.EventHandler(this.btn_SerchMap_Click);
-            // 
-            // btn_RecommandPlace
-            // 
-            this.btn_RecommandPlace.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_RecommandPlace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_RecommandPlace.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_RecommandPlace.Location = new System.Drawing.Point(458, 97);
-            this.btn_RecommandPlace.Name = "btn_RecommandPlace";
-            this.btn_RecommandPlace.Size = new System.Drawing.Size(114, 146);
-            this.btn_RecommandPlace.TabIndex = 4;
-            this.btn_RecommandPlace.Text = "추천여행지";
-            this.btn_RecommandPlace.UseVisualStyleBackColor = false;
-            this.btn_RecommandPlace.Click += new System.EventHandler(this.btn_RecommandPlace_Click);
-            // 
-            // btn_Epillogue
-            // 
-            this.btn_Epillogue.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_Epillogue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Epillogue.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_Epillogue.Location = new System.Drawing.Point(332, 249);
-            this.btn_Epillogue.Name = "btn_Epillogue";
-            this.btn_Epillogue.Size = new System.Drawing.Size(240, 146);
-            this.btn_Epillogue.TabIndex = 5;
-            this.btn_Epillogue.Text = "내일로 후기";
-            this.btn_Epillogue.UseVisualStyleBackColor = false;
-            this.btn_Epillogue.Click += new System.EventHandler(this.btn_Epillogue_Click);
-            // 
-            // btn_MySchduel
-            // 
-            this.btn_MySchduel.BackColor = System.Drawing.Color.DarkOrange;
-            this.btn_MySchduel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_MySchduel.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_MySchduel.Location = new System.Drawing.Point(18, 401);
-            this.btn_MySchduel.Name = "btn_MySchduel";
-            this.btn_MySchduel.Size = new System.Drawing.Size(554, 146);
-            this.btn_MySchduel.TabIndex = 7;
-            this.btn_MySchduel.Text = "나의 여행일정 만들기";
-            this.btn_MySchduel.UseVisualStyleBackColor = false;
-            this.btn_MySchduel.Click += new System.EventHandler(this.btn_MySchduel_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 60);
+            this.label1.Location = new System.Drawing.Point(26, 65);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 12);
+            this.label1.Size = new System.Drawing.Size(45, 14);
             this.label1.TabIndex = 11;
             this.label1.Text = "label1";
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // notifyIcon1
             // 
-            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "TourSystem";
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
-            // contextMenuStrip1
+            // metroTile1
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.열기ToolStripMenuItem,
-            this.프로그램정보ToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.종료ToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(147, 76);
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Controls.Add(this.pictureBox1);
+            this.metroTile1.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.metroTile1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.metroTile1.Location = new System.Drawing.Point(-5, 105);
+            this.metroTile1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(377, 86);
+            this.metroTile1.TabIndex = 12;
+            this.metroTile1.Text = "지역관광정보";
+            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTile1.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile1.UseCustomBackColor = true;
+            this.metroTile1.UseCustomForeColor = true;
+            this.metroTile1.UseSelectable = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
+            this.metroTile1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.metroTile1_Click);
             // 
-            // 열기ToolStripMenuItem
+            // pictureBox1
             // 
-            this.열기ToolStripMenuItem.Name = "열기ToolStripMenuItem";
-            this.열기ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.열기ToolStripMenuItem.Text = "열기";
-            this.열기ToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::TourTeamProject.Properties.Resources.다운로드;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(102, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // 프로그램정보ToolStripMenuItem
+            // metroTile2
             // 
-            this.프로그램정보ToolStripMenuItem.Name = "프로그램정보ToolStripMenuItem";
-            this.프로그램정보ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.프로그램정보ToolStripMenuItem.Text = "프로그램정보";
-            this.프로그램정보ToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            this.metroTile2.ActiveControl = null;
+            this.metroTile2.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.metroTile2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.metroTile2.Location = new System.Drawing.Point(20, 206);
+            this.metroTile2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.metroTile2.Name = "metroTile2";
+            this.metroTile2.Size = new System.Drawing.Size(317, 75);
+            this.metroTile2.TabIndex = 13;
+            this.metroTile2.Text = "통합검색";
+            this.metroTile2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile2.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTile2.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile2.UseCustomBackColor = true;
+            this.metroTile2.UseCustomForeColor = true;
+            this.metroTile2.UseSelectable = true;
+            this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
+            this.metroTile2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.metroTile2_Click);
             // 
-            // toolStripSeparator1
+            // metroTile3
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
+            this.metroTile3.ActiveControl = null;
+            this.metroTile3.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.metroTile3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.metroTile3.Location = new System.Drawing.Point(20, 302);
+            this.metroTile3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.metroTile3.Name = "metroTile3";
+            this.metroTile3.Size = new System.Drawing.Size(317, 75);
+            this.metroTile3.TabIndex = 15;
+            this.metroTile3.Text = "추천코스";
+            this.metroTile3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile3.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTile3.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile3.UseCustomBackColor = true;
+            this.metroTile3.UseCustomForeColor = true;
+            this.metroTile3.UseSelectable = true;
+            this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
+            this.metroTile3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.metroTile3_MouseClick);
             // 
-            // 종료ToolStripMenuItem
+            // metroTile4
             // 
-            this.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem";
-            this.종료ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.종료ToolStripMenuItem.Text = "종료";
-            this.종료ToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            this.metroTile4.ActiveControl = null;
+            this.metroTile4.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.metroTile4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.metroTile4.Location = new System.Drawing.Point(20, 402);
+            this.metroTile4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.metroTile4.Name = "metroTile4";
+            this.metroTile4.Size = new System.Drawing.Size(317, 75);
+            this.metroTile4.TabIndex = 17;
+            this.metroTile4.Text = "내주변엔";
+            this.metroTile4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile4.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTile4.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile4.UseCustomBackColor = true;
+            this.metroTile4.UseCustomForeColor = true;
+            this.metroTile4.UseSelectable = true;
+            this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
             // 
-            // btn_Region
+            // metroTile5
             // 
-            this.btn_Region.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_Region.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_Region.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Region.Font = new System.Drawing.Font("새굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_Region.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Region.Location = new System.Drawing.Point(18, 97);
-            this.btn_Region.Name = "btn_Region";
-            this.btn_Region.Size = new System.Drawing.Size(308, 146);
-            this.btn_Region.TabIndex = 0;
-            this.btn_Region.Text = "지역별 관광정보";
-            this.btn_Region.UseVisualStyleBackColor = false;
-            this.btn_Region.Click += new System.EventHandler(this.btn_Region_Click);
+            this.metroTile5.ActiveControl = null;
+            this.metroTile5.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.metroTile5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.metroTile5.Location = new System.Drawing.Point(20, 501);
+            this.metroTile5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.metroTile5.Name = "metroTile5";
+            this.metroTile5.Size = new System.Drawing.Size(317, 75);
+            this.metroTile5.TabIndex = 19;
+            this.metroTile5.Text = "여행일정";
+            this.metroTile5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile5.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTile5.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile5.UseCustomBackColor = true;
+            this.metroTile5.UseCustomForeColor = true;
+            this.metroTile5.UseSelectable = true;
+            this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
+            // 
+            // metroTile6
+            // 
+            this.metroTile6.ActiveControl = null;
+            this.metroTile6.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.metroTile6.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.metroTile6.Location = new System.Drawing.Point(20, 582);
+            this.metroTile6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.metroTile6.Name = "metroTile6";
+            this.metroTile6.Size = new System.Drawing.Size(317, 75);
+            this.metroTile6.TabIndex = 21;
+            this.metroTile6.Text = "여행후기";
+            this.metroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile6.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTile6.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile6.UseCustomBackColor = true;
+            this.metroTile6.UseCustomForeColor = true;
+            this.metroTile6.UseSelectable = true;
+            this.metroTile6.Click += new System.EventHandler(this.metroTile6_Click);
+            this.metroTile6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.metroTile6_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox6.Image = global::TourTeamProject.Properties.Resources.chat_comment_feedback_review_512;
+            this.pictureBox6.Location = new System.Drawing.Point(20, 582);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(102, 69);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 22;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox5.Image = global::TourTeamProject.Properties.Resources.calendar_1559935_960_720;
+            this.pictureBox5.Location = new System.Drawing.Point(20, 501);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(102, 69);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 20;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox4.Image = global::TourTeamProject.Properties.Resources.location2_512;
+            this.pictureBox4.Location = new System.Drawing.Point(20, 402);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(102, 69);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 18;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox3.Image = global::TourTeamProject.Properties.Resources.img_320735;
+            this.pictureBox3.Location = new System.Drawing.Point(20, 302);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(102, 69);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Image = global::TourTeamProject.Properties.Resources._47px_Search_Noun_project_15028_svg;
+            this.pictureBox2.Location = new System.Drawing.Point(20, 209);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(102, 72);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(594, 563);
+            this.BackgroundImage = global::TourTeamProject.Properties.Resources._55856_79175_443;
+            this.BackImage = global::TourTeamProject.Properties.Resources._55856_79175_4431;
+            this.ClientSize = new System.Drawing.Size(970, 657);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.metroTile6);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.metroTile5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.metroTile4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.metroTile3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.metroTile2);
+            this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_MySchduel);
-            this.Controls.Add(this.btn_Epillogue);
-            this.Controls.Add(this.btn_RecommandPlace);
-            this.Controls.Add(this.btn_SerchMap);
-            this.Controls.Add(this.btn_Total);
-            this.Controls.Add(this.btn_Region);
+            this.Font = new System.Drawing.Font("굴림", 10F);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "떠나요";
+            this.Padding = new System.Windows.Forms.Padding(23, 65, 23, 22);
+            this.Text = "집에서 떠나요~~";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.metroTile1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_Region;
-        private System.Windows.Forms.Button btn_Total;
-        private System.Windows.Forms.Button btn_SerchMap;
-        private System.Windows.Forms.Button btn_RecommandPlace;
-        private System.Windows.Forms.Button btn_Epillogue;
-        private System.Windows.Forms.Button btn_MySchduel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 열기ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 프로그램정보ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem 종료ToolStripMenuItem;
+        private MetroFramework.Controls.MetroTile metroTile1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroTile metroTile2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private MetroFramework.Controls.MetroTile metroTile3;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private MetroFramework.Controls.MetroTile metroTile4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private MetroFramework.Controls.MetroTile metroTile5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private MetroFramework.Controls.MetroTile metroTile6;
     }
 }
 

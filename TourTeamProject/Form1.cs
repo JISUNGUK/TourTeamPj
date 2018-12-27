@@ -135,5 +135,69 @@ namespace TourTeamProject
             }
 
         }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            FormTouristInformationByRegion ftbr = new FormTouristInformationByRegion();
+            ftbr.ShowDialog();
+        }
+
+        private void metroTile2_Click(object sender, EventArgs e)
+        {
+            IntegratedSearch its = new IntegratedSearch();
+            its.Show();
+        }
+
+        private void metroTile3_Click(object sender, EventArgs e)
+        {
+            RecommendCourse rcs = new RecommendCourse();
+            rcs.Show();
+        }
+
+        private void metroTile4_Click(object sender, EventArgs e)
+        {
+            FrmMySpaceSearch fcs = new FrmMySpaceSearch();
+            fcs.Show();
+        }
+
+        private void metroTile5_Click(object sender, EventArgs e)
+        {
+            FrmMySchdual FRM = new FrmMySchdual();
+            FRM.Show();
+        }
+
+        private void metroTile6_Click(object sender, EventArgs e)
+        {
+            FormApilogue foa = new FormApilogue();
+            foa.Show();
+        }
+
+        private void metroTile3_MouseClick(object sender, MouseEventArgs e)
+        {
+           
+
+        }
+
+        private void metroTile6_Click(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void metroTile2_Click(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void metroTile1_Click(object sender, MouseEventArgs e)
+        {
+            FormTouristInformationByRegion ftbr = new FormTouristInformationByRegion();
+            ftbr.ShowDialog();
+        }
+
+        private void metroTile4_Click_1(object sender, EventArgs e)
+        {
+            FrmMySpaceSearch fms = new FrmMySpaceSearch();
+            fms.Show();
+        }
     }
 }
