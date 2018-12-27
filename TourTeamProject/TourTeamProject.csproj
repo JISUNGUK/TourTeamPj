@@ -77,6 +77,12 @@
     <Compile Include="FrmInfo.Designer.cs">
       <DependentUpon>FrmInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="LSK\Apilogue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LSK\Apilogue.designer.cs">
+      <DependentUpon>Apilogue.cs</DependentUpon>
+    </Compile>
     <Compile Include="LSK\Blog.cs" />
     <Compile Include="LSK\DetailTourInfo.cs" />
     <Compile Include="Form1.cs">
@@ -163,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInfo.resx">
       <DependentUpon>FrmInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LSK\Apilogue.resx">
+      <DependentUpon>Apilogue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LSK\FormApilogue.resx">
       <DependentUpon>FormApilogue.cs</DependentUpon>

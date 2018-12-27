@@ -28,28 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnPrev = new System.Windows.Forms.Button();
             this.BtnNext = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 63);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 299);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // BtnPrev
             // 
-            this.BtnPrev.Location = new System.Drawing.Point(247, 379);
+            this.BtnPrev.Location = new System.Drawing.Point(152, 751);
             this.BtnPrev.Name = "BtnPrev";
             this.BtnPrev.Size = new System.Drawing.Size(85, 23);
             this.BtnPrev.TabIndex = 2;
@@ -59,7 +46,7 @@
             // 
             // BtnNext
             // 
-            this.BtnNext.Location = new System.Drawing.Point(482, 379);
+            this.BtnNext.Location = new System.Drawing.Point(387, 751);
             this.BtnNext.Name = "BtnNext";
             this.BtnNext.Size = new System.Drawing.Size(86, 23);
             this.BtnNext.TabIndex = 3;
@@ -70,34 +57,43 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(388, 384);
+            this.label1.Location = new System.Drawing.Point(293, 756);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 12);
             this.label1.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(23, 63);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(590, 682);
+            this.panel1.TabIndex = 5;
             // 
             // FormApilogue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 412);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(636, 797);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnNext);
             this.Controls.Add(this.BtnPrev);
-            this.Controls.Add(this.dataGridView1);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormApilogue";
             this.Text = "여행후기";
             this.Load += new System.EventHandler(this.FormApilogue_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button BtnPrev;
         private System.Windows.Forms.Button BtnNext;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

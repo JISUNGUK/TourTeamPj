@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TourTeamProject
 {
-    class Blog
+    public class Blog
     {
         private string title;
         private string link;
