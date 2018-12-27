@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dv_Place2 = new System.Windows.Forms.DataGridView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.lbl_PageInfo = new MetroFramework.Controls.MetroLabel();
@@ -42,8 +41,8 @@
             this.btn_Search = new MetroFramework.Controls.MetroButton();
             this.btn_Next = new MetroFramework.Controls.MetroButton();
             this.btn_Prev = new MetroFramework.Controls.MetroButton();
+            this.listview_Show = new MetroFramework.Controls.MetroListView();
             this.dv_Place = new MetroFramework.Controls.MetroGrid();
-            ((System.ComponentModel.ISupportInitialize)(this.dv_Place2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -70,17 +69,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "거리";
             // 
-            // dv_Place2
-            // 
-            this.dv_Place2.AllowUserToAddRows = false;
-            this.dv_Place2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dv_Place2.Location = new System.Drawing.Point(0, 322);
-            this.dv_Place2.Name = "dv_Place2";
-            this.dv_Place2.ReadOnly = true;
-            this.dv_Place2.RowTemplate.Height = 23;
-            this.dv_Place2.Size = new System.Drawing.Size(479, 251);
-            this.dv_Place2.TabIndex = 7;
-            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -94,8 +82,8 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.listview_Show);
             this.splitContainer1.Panel2.Controls.Add(this.dv_Place);
-            this.splitContainer1.Panel2.Controls.Add(this.dv_Place2);
             this.splitContainer1.Size = new System.Drawing.Size(1168, 541);
             this.splitContainer1.SplitterDistance = 38;
             this.splitContainer1.TabIndex = 11;
@@ -225,6 +213,21 @@
             this.btn_Prev.UseSelectable = true;
             this.btn_Prev.Click += new System.EventHandler(this.button2_Click);
             // 
+            // listview_Show
+            // 
+            this.listview_Show.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listview_Show.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.listview_Show.FullRowSelect = true;
+            this.listview_Show.Location = new System.Drawing.Point(0, 0);
+            this.listview_Show.MultiSelect = false;
+            this.listview_Show.Name = "listview_Show";
+            this.listview_Show.OwnerDraw = true;
+            this.listview_Show.Scrollable = false;
+            this.listview_Show.Size = new System.Drawing.Size(1168, 499);
+            this.listview_Show.TabIndex = 9;
+            this.listview_Show.UseCompatibleStateImageBehavior = false;
+            this.listview_Show.UseSelectable = true;
+            // 
             // dv_Place
             // 
             this.dv_Place.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuPopup;
@@ -256,7 +259,7 @@
             this.dv_Place.EnableHeadersVisualStyles = false;
             this.dv_Place.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dv_Place.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dv_Place.Location = new System.Drawing.Point(0, 0);
+            this.dv_Place.Location = new System.Drawing.Point(73, 430);
             this.dv_Place.Name = "dv_Place";
             this.dv_Place.ReadOnly = true;
             this.dv_Place.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -273,7 +276,7 @@
             this.dv_Place.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dv_Place.ShowCellErrors = false;
             this.dv_Place.ShowRowErrors = false;
-            this.dv_Place.Size = new System.Drawing.Size(1168, 499);
+            this.dv_Place.Size = new System.Drawing.Size(302, 33);
             this.dv_Place.Style = MetroFramework.MetroColorStyle.Blue;
             this.dv_Place.TabIndex = 8;
             // 
@@ -288,7 +291,6 @@
             this.Name = "FrmMySpaceSearch";
             this.Text = "내 주변 검색";
             this.Load += new System.EventHandler(this.FrmMySpaceSearch_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dv_Place2)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -303,7 +305,6 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dv_Place2;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private MetroFramework.Controls.MetroGrid dv_Place;
         private MetroFramework.Controls.MetroButton btn_Search;
@@ -313,5 +314,6 @@
         private MetroFramework.Controls.MetroLabel lbl_PageInfo;
         private MetroFramework.Controls.MetroButton btn_Next;
         private MetroFramework.Controls.MetroButton btn_Prev;
+        private MetroFramework.Controls.MetroListView listview_Show;
     }
 }
