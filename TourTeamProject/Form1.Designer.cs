@@ -107,6 +107,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // metroTile2
             // 
@@ -151,7 +152,7 @@
             this.metroTile4.ActiveControl = null;
             this.metroTile4.Cursor = System.Windows.Forms.Cursors.Cross;
             this.metroTile4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.metroTile4.Location = new System.Drawing.Point(20, 402);
+            this.metroTile4.Location = new System.Drawing.Point(20, 397);
             this.metroTile4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.metroTile4.Name = "metroTile4";
             this.metroTile4.Size = new System.Drawing.Size(317, 75);
@@ -170,7 +171,7 @@
             this.metroTile5.ActiveControl = null;
             this.metroTile5.Cursor = System.Windows.Forms.Cursors.Cross;
             this.metroTile5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.metroTile5.Location = new System.Drawing.Point(20, 501);
+            this.metroTile5.Location = new System.Drawing.Point(20, 491);
             this.metroTile5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.metroTile5.Name = "metroTile5";
             this.metroTile5.Size = new System.Drawing.Size(317, 75);
@@ -213,28 +214,31 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 22;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.metroTile6_Click);
             // 
             // pictureBox5
             // 
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox5.Image = global::TourTeamProject.Properties.Resources.calendar_1559935_960_720;
-            this.pictureBox5.Location = new System.Drawing.Point(20, 501);
+            this.pictureBox5.Location = new System.Drawing.Point(20, 497);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(102, 69);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 20;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.metroTile5_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox4.Image = global::TourTeamProject.Properties.Resources.location2_512;
-            this.pictureBox4.Location = new System.Drawing.Point(20, 402);
+            this.pictureBox4.Location = new System.Drawing.Point(20, 403);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(102, 69);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 18;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.metroTile4_Click);
             // 
             // pictureBox3
             // 
@@ -246,6 +250,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 16;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.metroTile3_Click);
             // 
             // pictureBox2
             // 
@@ -257,13 +262,14 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.metroTile2_Click);
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::TourTeamProject.Properties.Resources._55856_79175_4432;
-            this.pictureBox7.Location = new System.Drawing.Point(252, 6);
+            this.pictureBox7.Location = new System.Drawing.Point(253, 34);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(716, 678);
+            this.pictureBox7.Size = new System.Drawing.Size(716, 617);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 23;
             this.pictureBox7.TabStop = false;

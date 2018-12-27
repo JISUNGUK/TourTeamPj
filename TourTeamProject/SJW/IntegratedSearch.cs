@@ -232,7 +232,10 @@ namespace TourTeamProject
                 dgv.AllowUserToResizeColumns = true;
                 dgv.AutoSize = true;
 
+
             }
+            
+          
         }
         /// <summary>
         /// 검색어를 등록받아 json결과물을 출력해줌

@@ -196,7 +196,7 @@
             this.resultLbl.Location = new System.Drawing.Point(577, 136);
             this.resultLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.resultLbl.Name = "resultLbl";
-            this.resultLbl.Size = new System.Drawing.Size(119, 24);
+            this.resultLbl.Size = new System.Drawing.Size(73, 14);
             this.resultLbl.TabIndex = 40;
             this.resultLbl.Text = "검색건수:";
             // 
@@ -215,7 +215,7 @@
             this.searchKeyword.Location = new System.Drawing.Point(155, 46);
             this.searchKeyword.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.searchKeyword.Name = "searchKeyword";
-            this.searchKeyword.Size = new System.Drawing.Size(324, 34);
+            this.searchKeyword.Size = new System.Drawing.Size(324, 23);
             this.searchKeyword.TabIndex = 38;
             this.searchKeyword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.searchKeyword_KeyUp);
             // 
@@ -247,7 +247,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dv_Place.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dv_Place.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dv_Place.Dock = System.Windows.Forms.DockStyle.Top;
             this.dv_Place.EnableHeadersVisualStyles = false;
             this.dv_Place.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dv_Place.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -276,7 +276,7 @@
             // 
             // IntegratedSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 609);
             this.Controls.Add(this.splitContainer1);

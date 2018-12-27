@@ -115,6 +115,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackgroundImage = global::TourTeamProject.Properties.Resources._55856_79175_4433;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackImage = global::TourTeamProject.Properties.Resources._55856_79175_4431;
             this.ClientSize = new System.Drawing.Size(725, 737);
             this.Controls.Add(this.linkedLabel);
             this.Controls.Add(this.PostLabel);
