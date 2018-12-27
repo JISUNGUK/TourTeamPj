@@ -172,32 +172,10 @@ namespace TourTeamProject
             foa.Show();
         }
 
-        private void metroTile3_MouseClick(object sender, MouseEventArgs e)
-        {
-           
+       
 
-        }
+       
 
-        private void metroTile6_Click(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void metroTile2_Click(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void metroTile1_Click(object sender, MouseEventArgs e)
-        {
-            FormTouristInformationByRegion ftbr = new FormTouristInformationByRegion();
-            ftbr.ShowDialog();
-        }
-
-        private void metroTile4_Click_1(object sender, EventArgs e)
-        {
-            FrmMySpaceSearch fms = new FrmMySpaceSearch();
-            fms.Show();
-        }
+      
     }
 }
