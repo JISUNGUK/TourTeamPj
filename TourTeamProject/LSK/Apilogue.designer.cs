@@ -42,6 +42,7 @@
             this.LblTitle.Size = new System.Drawing.Size(61, 19);
             this.LblTitle.TabIndex = 0;
             this.LblTitle.Text = "label1";
+            this.LblTitle.Click += new System.EventHandler(this.LblTitle_Click);
             // 
             // LblBloggerName
             // 
@@ -54,6 +55,7 @@
             this.LblBloggerName.Size = new System.Drawing.Size(44, 13);
             this.LblBloggerName.TabIndex = 1;
             this.LblBloggerName.Text = "label2";
+            this.LblBloggerName.Click += new System.EventHandler(this.LblBloggerName_Click);
             // 
             // Apilogue
             // 

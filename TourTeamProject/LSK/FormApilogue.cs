@@ -63,56 +63,56 @@ namespace TourTeamProject
                 listBlog.Add(blog);
             }
 
-            Apilogue icon = new Apilogue(listBlog);
+            Apilogue icon = new Apilogue();
 
             for (int i = 0; i < listBlog.Count; i++)
             {
                 switch (i)
                 {
                     case 0:
-                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername);
+                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername, listBlog[i].Bloggerlink + "/" + listBlog[i].Link.Remove(0, listBlog[i].Link.IndexOf("?") + 24));
                         icon.Location = new Point(12, 0);
                         panel1.Controls.Add(icon);
                         icon.Click += Icon_Click;
                         break;
                     case 1:
-                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername);
+                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername, listBlog[i].Bloggerlink + "/" + listBlog[i].Link.Remove(0, listBlog[i].Link.IndexOf("?") + 24));
                         icon.Location = new Point(307, 0);
                         panel1.Controls.Add(icon);
                         icon.Click += Icon_Click;
                         break;
                     case 2:
-                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername);
+                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername, listBlog[i].Bloggerlink + "/" + listBlog[i].Link.Remove(0, listBlog[i].Link.IndexOf("?") + 24));
                         icon.Location = new Point(12, 165);
                         panel1.Controls.Add(icon);
                         icon.Click += Icon_Click;
                         break;
                     case 3:
-                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername);
+                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername, listBlog[i].Bloggerlink + "/" + listBlog[i].Link.Remove(0, listBlog[i].Link.IndexOf("?") + 24));
                         icon.Location = new Point(307, 165);
                         panel1.Controls.Add(icon);
                         icon.Click += Icon_Click;
                         break;
                     case 4:
-                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername);
+                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername, listBlog[i].Bloggerlink + "/" + listBlog[i].Link.Remove(0, listBlog[i].Link.IndexOf("?") + 24));
                         icon.Location = new Point(12, 330);
                         panel1.Controls.Add(icon);
                         icon.Click += Icon_Click;
                         break;
                     case 5:
-                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername);
+                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername, listBlog[i].Bloggerlink + "/" + listBlog[i].Link.Remove(0, listBlog[i].Link.IndexOf("?") + 24));
                         icon.Location = new Point(307, 330);
                         panel1.Controls.Add(icon);
                         icon.Click += Icon_Click;
                         break;
                     case 6:
-                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername);
+                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername, listBlog[i].Bloggerlink + "/" + listBlog[i].Link.Remove(0, listBlog[i].Link.IndexOf("?") + 24));
                         icon.Location = new Point(12, 495);
                         panel1.Controls.Add(icon);
                         icon.Click += Icon_Click;
                         break;
                     case 7:
-                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername);
+                        icon = new Apilogue(listBlog[i].Title, listBlog[i].Bloggername, listBlog[i].Bloggerlink + "/" + listBlog[i].Link.Remove(0, listBlog[i].Link.IndexOf("?") + 24));
                         icon.Location = new Point(307, 495);
                         panel1.Controls.Add(icon);
                         icon.Click += Icon_Click;
