@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourTeamProject", "TourTeamProject\TourTeamProject.csproj", "{A2CDB5CF-2670-4023-A57C-61D9A115D505}"
 EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "TourLastLast", "TourLastLast\TourLastLast.aiproj", "{9486B606-DB8B-46E1-99A7-A6FE4BAF84A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		All|Any CPU = All|Any CPU
@@ -18,6 +20,12 @@ Global
 		{A2CDB5CF-2670-4023-A57C-61D9A115D505}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2CDB5CF-2670-4023-A57C-61D9A115D505}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2CDB5CF-2670-4023-A57C-61D9A115D505}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9486B606-DB8B-46E1-99A7-A6FE4BAF84A3}.All|Any CPU.ActiveCfg = DefaultBuild
+		{9486B606-DB8B-46E1-99A7-A6FE4BAF84A3}.All|Any CPU.Build.0 = DefaultBuild
+		{9486B606-DB8B-46E1-99A7-A6FE4BAF84A3}.Debug|Any CPU.ActiveCfg = DefaultBuild
+		{9486B606-DB8B-46E1-99A7-A6FE4BAF84A3}.Debug|Any CPU.Build.0 = DefaultBuild
+		{9486B606-DB8B-46E1-99A7-A6FE4BAF84A3}.Release|Any CPU.ActiveCfg = DefaultBuild
+		{9486B606-DB8B-46E1-99A7-A6FE4BAF84A3}.Release|Any CPU.Build.0 = DefaultBuild
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

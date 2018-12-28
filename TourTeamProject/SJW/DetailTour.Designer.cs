@@ -33,8 +33,8 @@
             this.Title = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PostLabel = new System.Windows.Forms.Label();
-            this.addrLabel = new System.Windows.Forms.Label();
             this.PlacePIc = new System.Windows.Forms.PictureBox();
+            this.linkedLabel = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.PlacePIc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,17 +87,6 @@
             this.PostLabel.Text = "우편번호:없음";
             this.PostLabel.Click += new System.EventHandler(this.addrLabel_Click);
             // 
-            // addrLabel
-            // 
-            this.addrLabel.AutoSize = true;
-            this.addrLabel.Font = new System.Drawing.Font("맑은 고딕", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.addrLabel.Location = new System.Drawing.Point(469, 211);
-            this.addrLabel.Name = "addrLabel";
-            this.addrLabel.Size = new System.Drawing.Size(132, 37);
-            this.addrLabel.TabIndex = 6;
-            this.addrLabel.Text = "주소:없음";
-            this.addrLabel.Click += new System.EventHandler(this.addrLabel_Click);
-            // 
             // PlacePIc
             // 
             this.PlacePIc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -109,13 +98,25 @@
             this.PlacePIc.TabIndex = 3;
             this.PlacePIc.TabStop = false;
             // 
+            // linkedLabel
+            // 
+            this.linkedLabel.AutoSize = true;
+            this.linkedLabel.Font = new System.Drawing.Font("돋움", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.linkedLabel.Location = new System.Drawing.Point(487, 276);
+            this.linkedLabel.Name = "linkedLabel";
+            this.linkedLabel.Size = new System.Drawing.Size(101, 21);
+            this.linkedLabel.TabIndex = 8;
+            this.linkedLabel.TabStop = true;
+            this.linkedLabel.Text = "주소:없음";
+            this.linkedLabel.Click += new System.EventHandler(this.linkedLabel_Click);
+            // 
             // DetailTour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(721, 737);
-            this.Controls.Add(this.addrLabel);
+            this.Controls.Add(this.linkedLabel);
             this.Controls.Add(this.PostLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.PlacePIc);
@@ -139,6 +140,6 @@
         private System.Windows.Forms.PictureBox PlacePIc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label PostLabel;
-        private System.Windows.Forms.Label addrLabel;
+        private System.Windows.Forms.LinkLabel linkedLabel;
     }
 }

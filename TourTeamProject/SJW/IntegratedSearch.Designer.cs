@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.RowNum = new MetroFramework.Controls.MetroComboBox();
             this.totalpgNum = new MetroFramework.Controls.MetroLabel();
@@ -41,12 +45,13 @@
             this.resultLbl = new System.Windows.Forms.Label();
             this.searchResult = new System.Windows.Forms.TextBox();
             this.searchKeyword = new System.Windows.Forms.TextBox();
-            this.tourGridview = new System.Windows.Forms.DataGridView();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.dv_Place = new MetroFramework.Controls.MetroGrid();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tourGridview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dv_Place)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -76,9 +81,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
-            this.splitContainer1.Panel2.Controls.Add(this.tourGridview);
-            this.splitContainer1.Size = new System.Drawing.Size(1607, 841);
-            this.splitContainer1.SplitterDistance = 149;
+            this.splitContainer1.Panel2.Controls.Add(this.dv_Place);
+            this.splitContainer1.Size = new System.Drawing.Size(824, 456);
+            this.splitContainer1.SplitterDistance = 199;
             this.splitContainer1.SplitterWidth = 8;
             this.splitContainer1.TabIndex = 0;
             this.splitContainer1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.splitContainer1_Scroll);
@@ -92,10 +97,10 @@
             "20",
             "50",
             "100"});
-            this.RowNum.Location = new System.Drawing.Point(1239, 44);
+            this.RowNum.Location = new System.Drawing.Point(699, 46);
             this.RowNum.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.RowNum.Name = "RowNum";
-            this.RowNum.Size = new System.Drawing.Size(221, 29);
+            this.RowNum.Size = new System.Drawing.Size(92, 29);
             this.RowNum.TabIndex = 1;
             this.RowNum.UseSelectable = true;
             this.RowNum.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_2);
@@ -103,7 +108,7 @@
             // totalpgNum
             // 
             this.totalpgNum.AutoSize = true;
-            this.totalpgNum.Location = new System.Drawing.Point(1239, 97);
+            this.totalpgNum.Location = new System.Drawing.Point(578, 90);
             this.totalpgNum.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.totalpgNum.Name = "totalpgNum";
             this.totalpgNum.Size = new System.Drawing.Size(72, 19);
@@ -123,7 +128,7 @@
             // currentPage
             // 
             this.currentPage.AutoSize = true;
-            this.currentPage.Location = new System.Drawing.Point(1066, 97);
+            this.currentPage.Location = new System.Drawing.Point(578, 44);
             this.currentPage.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.currentPage.Name = "currentPage";
             this.currentPage.Size = new System.Drawing.Size(58, 19);
@@ -132,10 +137,10 @@
             // 
             // btnLast
             // 
-            this.btnLast.Location = new System.Drawing.Point(862, 90);
+            this.btnLast.Location = new System.Drawing.Point(424, 90);
             this.btnLast.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(139, 44);
+            this.btnLast.Size = new System.Drawing.Size(55, 44);
             this.btnLast.TabIndex = 7;
             this.btnLast.Text = "끝";
             this.btnLast.UseSelectable = true;
@@ -143,10 +148,10 @@
             // 
             // btnPreview
             // 
-            this.btnPreview.Location = new System.Drawing.Point(479, 90);
+            this.btnPreview.Location = new System.Drawing.Point(249, 90);
             this.btnPreview.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnPreview.Name = "btnPreview";
-            this.btnPreview.Size = new System.Drawing.Size(139, 44);
+            this.btnPreview.Size = new System.Drawing.Size(50, 44);
             this.btnPreview.TabIndex = 5;
             this.btnPreview.Text = "이전";
             this.btnPreview.UseSelectable = true;
@@ -154,10 +159,10 @@
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(672, 90);
+            this.btnNext.Location = new System.Drawing.Point(335, 90);
             this.btnNext.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(139, 44);
+            this.btnNext.Size = new System.Drawing.Size(49, 44);
             this.btnNext.TabIndex = 6;
             this.btnNext.Text = "다음";
             this.btnNext.UseSelectable = true;
@@ -165,10 +170,10 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(1066, 44);
+            this.btnSearch.Location = new System.Drawing.Point(505, 44);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(139, 44);
+            this.btnSearch.Size = new System.Drawing.Size(61, 38);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "검색";
             this.btnSearch.UseSelectable = true;
@@ -176,10 +181,10 @@
             // 
             // btnFirst
             // 
-            this.btnFirst.Location = new System.Drawing.Point(288, 90);
+            this.btnFirst.Location = new System.Drawing.Point(155, 90);
             this.btnFirst.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(139, 44);
+            this.btnFirst.Size = new System.Drawing.Size(54, 44);
             this.btnFirst.TabIndex = 1;
             this.btnFirst.Text = "처음";
             this.btnFirst.UseSelectable = true;
@@ -188,7 +193,7 @@
             // resultLbl
             // 
             this.resultLbl.AutoSize = true;
-            this.resultLbl.Location = new System.Drawing.Point(1426, 105);
+            this.resultLbl.Location = new System.Drawing.Point(577, 136);
             this.resultLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.resultLbl.Name = "resultLbl";
             this.resultLbl.Size = new System.Drawing.Size(119, 24);
@@ -207,33 +212,73 @@
             // 
             // searchKeyword
             // 
-            this.searchKeyword.Location = new System.Drawing.Point(288, 48);
+            this.searchKeyword.Location = new System.Drawing.Point(155, 46);
             this.searchKeyword.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.searchKeyword.Name = "searchKeyword";
-            this.searchKeyword.Size = new System.Drawing.Size(710, 34);
+            this.searchKeyword.Size = new System.Drawing.Size(324, 34);
             this.searchKeyword.TabIndex = 38;
             this.searchKeyword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.searchKeyword_KeyUp);
             // 
-            // tourGridview
+            // dv_Place
             // 
-            this.tourGridview.AllowUserToAddRows = false;
-            this.tourGridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tourGridview.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tourGridview.Location = new System.Drawing.Point(0, 0);
-            this.tourGridview.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.tourGridview.Name = "tourGridview";
-            this.tourGridview.ReadOnly = true;
-            this.tourGridview.RowTemplate.Height = 23;
-            this.tourGridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tourGridview.Size = new System.Drawing.Size(1607, 684);
-            this.tourGridview.TabIndex = 0;
-            this.tourGridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tourGridview_CellClick);
+            this.dv_Place.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuPopup;
+            this.dv_Place.AllowUserToAddRows = false;
+            this.dv_Place.AllowUserToDeleteRows = false;
+            this.dv_Place.AllowUserToResizeColumns = false;
+            this.dv_Place.AllowUserToResizeRows = false;
+            this.dv_Place.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dv_Place.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dv_Place.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dv_Place.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dv_Place.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dv_Place.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dv_Place.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dv_Place.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dv_Place.EnableHeadersVisualStyles = false;
+            this.dv_Place.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dv_Place.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dv_Place.Location = new System.Drawing.Point(0, 0);
+            this.dv_Place.Margin = new System.Windows.Forms.Padding(5);
+            this.dv_Place.Name = "dv_Place";
+            this.dv_Place.ReadOnly = true;
+            this.dv_Place.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dv_Place.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dv_Place.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dv_Place.RowTemplate.Height = 23;
+            this.dv_Place.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dv_Place.ShowCellErrors = false;
+            this.dv_Place.ShowRowErrors = false;
+            this.dv_Place.Size = new System.Drawing.Size(824, 249);
+            this.dv_Place.Style = MetroFramework.MetroColorStyle.Blue;
+            this.dv_Place.TabIndex = 10;
+            this.dv_Place.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dv_Place_CellClick);
             // 
             // IntegratedSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1681, 994);
+            this.ClientSize = new System.Drawing.Size(898, 609);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("굴림", 9.857143F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -246,7 +291,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tourGridview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dv_Place)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,7 +302,6 @@
         private System.Windows.Forms.Label resultLbl;
         private System.Windows.Forms.TextBox searchResult;
         private System.Windows.Forms.TextBox searchKeyword;
-        private System.Windows.Forms.DataGridView tourGridview;
         private MetroFramework.Controls.MetroButton btnPreview;
         private MetroFramework.Controls.MetroButton btnSearch;
         private MetroFramework.Controls.MetroButton btnFirst;
@@ -267,5 +311,7 @@
         private MetroFramework.Controls.MetroLabel currentPage;
         private MetroFramework.Controls.MetroButton btnLast;
         private MetroFramework.Controls.MetroButton btnNext;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private MetroFramework.Controls.MetroGrid dv_Place;
     }
 }

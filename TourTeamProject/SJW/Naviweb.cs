@@ -16,10 +16,12 @@ namespace TourTeamProject
     public partial class Naviweb : MetroFramework.Forms.MetroForm
     {
         NavigationTask nv;
+        System.Windows.Forms.Timer tr;
         private string address;
         private string location;
         private string mapx;
         private string mapy;
+        private string oldUrl="";
         public Naviweb()
         {
             InitializeComponent();
@@ -31,15 +33,15 @@ namespace TourTeamProject
 
         private void Naviweb_Load(object sender, EventArgs e)
         {
-            System.Windows.Forms.Timer tr = new System.Windows.Forms.Timer();
-            tr.Enabled = true;
+            tr = new System.Windows.Forms.Timer();
+            
             tr.Tick += Tr_Tick;
             InitWebbrowser(address);
         }
 
         private void Tr_Tick(object sender, EventArgs e)
         {
-            if(webView1.Url.Contains("/@"))
+            if(webView1.Url.Contains("/@")&&webView1.Url!=oldUrl)
                 {
                 searchKeyword.Text = webView1.Url;
                 webPage.WebView = webView1;
@@ -47,6 +49,8 @@ namespace TourTeamProject
                 int altitude = searchKeyword.Text.IndexOf("z/");
                 latitudeText.Text = searchKeyword.Text.Substring(latitude + 2, altitude - latitude - 1);
                 location = latitudeText.Text;
+                oldUrl = webView1.Url;
+                tr.Enabled = false;
             }
         }
 
@@ -57,28 +61,14 @@ namespace TourTeamProject
         /// <param name="url"></param>
         public void InitWebbrowser(string url)
         {
+            
             nv = webView1.LoadUrl("https://" + url);
             
 
              if (url.Contains("www.google.co.kr/maps/search"))
              {
                 latitudeText.Text = "위도:" + mapx + "경도:" + mapy;
-                /* while (true)
-                 {
-                    searchKeyword.Text=webView1.Url;
-                    webPage.WebView = webView1;
-                    MessageBox.Show("로딩중:" + webView1.Url);
-                     if (webView1.Url.Contains("/@"))
-                     {
-                         searchKeyword.Text = webView1.Url;
-                         webPage.WebView = webView1;
-                         int latitude = searchKeyword.Text.IndexOf("/@");
-                         int altitude = searchKeyword.Text.IndexOf("z/");
-                         latitudeText.Text = searchKeyword.Text.Substring(latitude + 2, altitude - latitude - 1);
-                         location = latitudeText.Text;
-                         break;
-                     }
-                 }*/
+                
                 webPage.WebView = webView1;
                 searchKeyword.Text = url;
             }
@@ -87,8 +77,8 @@ namespace TourTeamProject
                  webPage.WebView = webView1;
              }
 
-            
 
+            tr.Enabled = true;
         }
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
@@ -143,6 +133,12 @@ namespace TourTeamProject
 
         }
 
-
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            FrmMySpaceSearch fms = new FrmMySpaceSearch();
+            fms.DisplayResult(latitudeText.Text);
+            fms.Show();
+            
+        }
     }
 }

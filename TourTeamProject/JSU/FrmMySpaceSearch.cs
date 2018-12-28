@@ -43,17 +43,25 @@ namespace TourTeamProject
         public FrmMySpaceSearch()
         {
             InitializeComponent();
+            dv_Place.Enabled = false;
+            dv_Place.Visible = false;
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
+           DisplayResult(txt_Point.Text);
+        }
+
+        public void DisplayResult(string position)
+        {
             dv_Place.DataSource = null;
+            
             list.Clear();
             // 좌표입력이 있다면
-            
-            if (txt_Point.Text != string.Empty)
+
+            if (position != string.Empty)
             {
-                string[] xyCode = XYConvert(txt_Point.Text);
+                string[] xyCode = XYConvert(position);
 
                 mapX = "&mapX=" + xyCode[1]; mapY = "&mapY=" + xyCode[0]; radius = "&radius=" + txt_Radius.Text;
             }
@@ -261,10 +269,48 @@ namespace TourTeamProject
             }
             //DataTable dt = CreateDataTable(list);
             
-            dv_Place.DataSource = null;
-            dv_Place.DataSource = CreateDataTable(list);
-            dv_Place.AutoResizeColumns();
-            dv_Place.AutoResizeRows();
+            //dv_Place.DataSource = null;
+            //dv_Place.DataSource = CreateDataTable(list);
+
+
+            ListViewItem[] items = ListItemsMakes(list);
+            listview_Show.View = View.LargeIcon;
+            listview_Show.Items.AddRange(items);
+
+            //dv_Place.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            //dv_Place.AutoResizeRows();
+        }
+
+        private ListViewItem[] ListItemsMakes(List<SpaceTourInfo> list)
+        {
+            List<ListViewItem> listViewItems = new List<ListViewItem>();
+
+            listview_Show.Items.Clear();
+            ImageList image = new ImageList();
+            image.ImageSize = new Size(180, 118);
+            image.ColorDepth = ColorDepth.Depth32Bit;
+
+            foreach (var item in list)
+            {
+                ListViewItem example = new ListViewItem(item.Title,item.Title);
+                listViewItems.Add(example);
+
+
+                image.Images.Add(item.Title, Image.FromStream(GetImage(item.Firstimage)));
+            }
+
+            listview_Show.LargeImageList = image;
+            return listViewItems.ToArray();
+        }
+
+        private Stream GetImage(string imageString)
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(imageString);
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+            Stream stream = response.GetResponseStream();
+
+            return stream;
         }
 
         /// <summary>
@@ -440,5 +486,7 @@ namespace TourTeamProject
             pageNo = "&pageNo=" + --pgn;
             ApiParser();
         }
+
+        
     }
 }

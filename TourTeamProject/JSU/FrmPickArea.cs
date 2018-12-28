@@ -165,6 +165,9 @@ namespace TourTeamProject
             
         }
 
+        private void FrmPickArea_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

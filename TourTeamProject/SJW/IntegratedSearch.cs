@@ -70,7 +70,7 @@ namespace TourTeamProject
         {
             PageCount = 1;
             string json = jsonParse(searchKeyword.Text);
-            DisplayResult(tourGridview, json);
+            DisplayResult(dv_Place, json);
         }
         /// <summary>
         /// json출력결과를 받아서 해당 데이터로 된 데이터테이블을 반환시켜줌
@@ -98,7 +98,7 @@ namespace TourTeamProject
                 if (totalCount > 0)
                 {
                     TourList.Clear();
-                    tourGridview.DataSource = null;
+                    dv_Place.DataSource = null;
                     JObject jr = JObject.Parse(JB["items"].ToString());
 
                     if (totalCount != 1)
@@ -169,17 +169,17 @@ namespace TourTeamProject
                     DataTable dt = new DataTable("tourPlace");
                     DataColumn dTitle = new DataColumn("제목");
                     DataColumn dAddress = new DataColumn("주소");
-                    DataColumn dxPosition = new DataColumn("위도");
-                    DataColumn dyPosition = new DataColumn("경도");
-                    DataColumn dTel = new DataColumn("번호");
+                    //DataColumn dxPosition = new DataColumn("위도");
+                   // DataColumn dyPosition = new DataColumn("경도");
+                    DataColumn dTel = new DataColumn("전화번호");
                     DataColumn dZip = new DataColumn("우편번호");
                     DataColumn dHomepage = new DataColumn("홈페이지");
 
 
                     dt.Columns.Add(dTitle);
                     dt.Columns.Add(dAddress);
-                    dt.Columns.Add(dxPosition);
-                    dt.Columns.Add(dyPosition);
+                    //dt.Columns.Add(dxPosition);
+                    //dt.Columns.Add(dyPosition);
                     dt.Columns.Add(dTel);
                     dt.Columns.Add(new DataColumn("이미지", System.Type.GetType("System.Byte[]", true, true)));
                     int nullcount = 0;
@@ -189,10 +189,10 @@ namespace TourTeamProject
                         DataRow dr = dt.NewRow();
                         dr[0] = v.Title;
                         dr[1] = v.Address;
-                        dr[2] = v.Mapx;
-                        dr[3] = v.Mapy;
-                        dr[4] = v.Tel;
-                        dr[5] = displayImage(v.Imageurl);
+                        //dr[2] = v.Mapx;
+                        //dr[3] = v.Mapy;
+                        dr[2] = v.Tel;
+                        dr[3] = displayImage(v.Imageurl);
 
 
                         dt.Rows.Add(dr);
@@ -227,8 +227,9 @@ namespace TourTeamProject
             dgv.DataSource = GetTourTable(searchword);
             if (dgv.DataSource != null)
             {
-                dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                //dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                 dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                dgv.AllowUserToResizeColumns = true;
                 dgv.AutoSize = true;
 
             }
@@ -293,18 +294,7 @@ namespace TourTeamProject
 
         private void tourGridview_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string contentid = TourList[tourGridview.CurrentRow.Index].Contentid;
-            string contentpid = TourList[tourGridview.CurrentRow.Index].Contenttypeid;
-            string address = TourList[tourGridview.CurrentRow.Index].Address;
-            string mapx = TourList[tourGridview.CurrentRow.Index].Mapx;
-            string mapy= TourList[tourGridview.CurrentRow.Index].Mapy;
-            DetailTour dt = new DetailTour();
-            dt.Contentid = contentid;
-            dt.Contentpid = contentpid;
-            dt.Mapx = mapx;
-            dt.Mapy = mapy;
-            dt.Address = address;
-            dt.Show();
+            
 
         }
 
@@ -345,7 +335,7 @@ namespace TourTeamProject
         {
             PageCount = 1;
             string json = jsonParse(searchKeyword.Text);
-            DisplayResult(tourGridview, json);
+            DisplayResult(dv_Place, json);
 
         }
 
@@ -354,7 +344,7 @@ namespace TourTeamProject
             if (PageCount > 1)
             {
                 PageCount--;
-                DisplayResult(tourGridview, jsonParse(searchKeyword.Text));
+                DisplayResult(dv_Place, jsonParse(searchKeyword.Text));
             }
             else
                 MessageBox.Show("첫번째 페이지입니다");
@@ -366,7 +356,7 @@ namespace TourTeamProject
             if (PageCount != TotalPageNum)
             {
                 PageCount++;
-                DisplayResult(tourGridview, jsonParse(searchKeyword.Text));
+                DisplayResult(dv_Place, jsonParse(searchKeyword.Text));
             }
             else
                 MessageBox.Show("마지막 페이지입니다");
@@ -387,7 +377,7 @@ namespace TourTeamProject
             {
                 PageCount = 1;
                 string json = jsonParse(searchKeyword.Text);
-                DisplayResult(tourGridview, json);
+                DisplayResult(dv_Place, json);
 
             }
         }
@@ -398,10 +388,27 @@ namespace TourTeamProject
             {
                 PageCount = TotalPageNum;
                 string json = jsonParse(searchKeyword.Text);
-                DisplayResult(tourGridview, json);
+                DisplayResult(dv_Place, json);
             }
             else
                 MessageBox.Show("마지막 페이지입니다");
+
+        }
+
+        private void dv_Place_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string contentid = TourList[dv_Place.CurrentRow.Index].Contentid;
+            string contentpid = TourList[dv_Place.CurrentRow.Index].Contenttypeid;
+            string address = TourList[dv_Place.CurrentRow.Index].Address;
+            string mapx = TourList[dv_Place.CurrentRow.Index].Mapx;
+            string mapy = TourList[dv_Place.CurrentRow.Index].Mapy;
+            DetailTour dt = new DetailTour();
+            dt.Contentid = contentid;
+            dt.Contentpid = contentpid;
+            dt.Mapx = mapx;
+            dt.Mapy = mapy;
+            dt.Address = address;
+            dt.Show();
 
         }
     }
