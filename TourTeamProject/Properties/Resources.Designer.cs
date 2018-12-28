@@ -83,36 +83,6 @@ namespace TourTeamProject.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap _55856_79175_4431 {
-            get {
-                object obj = ResourceManager.GetObject("55856_79175_4431", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static System.Drawing.Bitmap _55856_79175_4432 {
-            get {
-                object obj = ResourceManager.GetObject("55856_79175_4432", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static System.Drawing.Bitmap _55856_79175_4433 {
-            get {
-                object obj = ResourceManager.GetObject("55856_79175_4433", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
         internal static System.Drawing.Bitmap calendar_1559935_960_720 {
             get {
                 object obj = ResourceManager.GetObject("calendar-1559935_960_720", resourceCulture);
@@ -166,16 +136,6 @@ namespace TourTeamProject.Properties {
         internal static System.Drawing.Bitmap 다운로드 {
             get {
                 object obj = ResourceManager.GetObject("다운로드", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static System.Drawing.Bitmap 연결 {
-            get {
-                object obj = ResourceManager.GetObject("연결", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

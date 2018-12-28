@@ -266,7 +266,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::TourTeamProject.Properties.Resources._55856_79175_4432;
+            this.pictureBox7.Image = global::TourTeamProject.Properties.Resources._55856_79175_443;
             this.pictureBox7.Location = new System.Drawing.Point(253, 34);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(716, 617);
@@ -282,7 +282,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackgroundImage = global::TourTeamProject.Properties.Resources._55856_79175_443;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BackImage = global::TourTeamProject.Properties.Resources._55856_79175_4431;
+           
             this.ClientSize = new System.Drawing.Size(970, 657);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
