@@ -13,6 +13,7 @@ namespace TourTeamProject
     public partial class Apilogue : UserControl
     {
         private List<Blog> listBlog;
+        private string link;
 
         public Apilogue()
         {
@@ -29,6 +30,21 @@ namespace TourTeamProject
             InitializeComponent();
             LblTitle.Text = title;
             LblBloggerName.Text = bloggername;
+        }
+
+        public Apilogue(string title, string bloggername, string link) : this(title, bloggername)
+        {
+            this.link = link;
+        }
+
+        private void LblTitle_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(link);
+        }
+
+        private void LblBloggerName_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(link);
         }
     }
 }
