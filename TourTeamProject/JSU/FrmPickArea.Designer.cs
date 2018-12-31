@@ -364,8 +364,6 @@
             this.MinimizeBox = false;
             this.Name = "FrmPickArea";
             this.Text = "여행지를 선택하세요";
-            this.Load += new System.EventHandler(this.FrmPickArea_Load);
-            this.MouseLeave += new System.EventHandler(this.FrmPickArea_MouseLeave);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             this.ResumeLayout(false);

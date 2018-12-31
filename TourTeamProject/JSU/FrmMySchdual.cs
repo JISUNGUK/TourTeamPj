@@ -37,6 +37,13 @@ namespace TourTeamProject
             rbo_Rail_5.Text = "내일로패스\n        5일";
             rbo_Rail_7.Text = "내일로패스\n        7일";
             rbo_Hana_3.Text = "하나로패스\n        3일";
+
+            //DBtoMysql();
+        }
+
+        private void DBtoMysql()
+        {
+            
         }
 
         #region 여행일자 변수 셋팅부
