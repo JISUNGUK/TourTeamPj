@@ -81,12 +81,12 @@
             // 
             this.metroTile1.ActiveControl = null;
             this.metroTile1.Controls.Add(this.pictureBox1);
-            this.metroTile1.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.metroTile1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroTile1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.metroTile1.Location = new System.Drawing.Point(-5, 105);
             this.metroTile1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(377, 86);
+            this.metroTile1.Size = new System.Drawing.Size(337, 86);
             this.metroTile1.TabIndex = 12;
             this.metroTile1.Text = "지역관광정보";
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -99,7 +99,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::TourTeamProject.Properties.Resources.다운로드;
             this.pictureBox1.Location = new System.Drawing.Point(25, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -112,12 +111,12 @@
             // metroTile2
             // 
             this.metroTile2.ActiveControl = null;
-            this.metroTile2.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.metroTile2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroTile2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.metroTile2.Location = new System.Drawing.Point(20, 206);
             this.metroTile2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(317, 75);
+            this.metroTile2.Size = new System.Drawing.Size(312, 75);
             this.metroTile2.TabIndex = 13;
             this.metroTile2.Text = "통합검색";
             this.metroTile2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -131,12 +130,12 @@
             // metroTile3
             // 
             this.metroTile3.ActiveControl = null;
-            this.metroTile3.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.metroTile3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroTile3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.metroTile3.Location = new System.Drawing.Point(20, 302);
             this.metroTile3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(317, 75);
+            this.metroTile3.Size = new System.Drawing.Size(312, 75);
             this.metroTile3.TabIndex = 15;
             this.metroTile3.Text = "추천코스";
             this.metroTile3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -150,12 +149,12 @@
             // metroTile4
             // 
             this.metroTile4.ActiveControl = null;
-            this.metroTile4.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.metroTile4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroTile4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.metroTile4.Location = new System.Drawing.Point(20, 397);
             this.metroTile4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(317, 75);
+            this.metroTile4.Size = new System.Drawing.Size(312, 75);
             this.metroTile4.TabIndex = 17;
             this.metroTile4.Text = "내주변엔";
             this.metroTile4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -169,12 +168,12 @@
             // metroTile5
             // 
             this.metroTile5.ActiveControl = null;
-            this.metroTile5.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.metroTile5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroTile5.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.metroTile5.Location = new System.Drawing.Point(20, 491);
             this.metroTile5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(317, 75);
+            this.metroTile5.Size = new System.Drawing.Size(312, 75);
             this.metroTile5.TabIndex = 19;
             this.metroTile5.Text = "여행일정";
             this.metroTile5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -188,12 +187,12 @@
             // metroTile6
             // 
             this.metroTile6.ActiveControl = null;
-            this.metroTile6.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.metroTile6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroTile6.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.metroTile6.Location = new System.Drawing.Point(20, 582);
             this.metroTile6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(317, 75);
+            this.metroTile6.Size = new System.Drawing.Size(312, 75);
             this.metroTile6.TabIndex = 21;
             this.metroTile6.Text = "여행후기";
             this.metroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -282,7 +281,6 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackgroundImage = global::TourTeamProject.Properties.Resources._55856_79175_443;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-           
             this.ClientSize = new System.Drawing.Size(970, 657);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);

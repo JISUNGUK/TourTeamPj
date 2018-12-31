@@ -47,6 +47,14 @@ namespace TourTeamProject
         /// <param name="e"></param>
         private void dateTime_Start_ValueChanged(object sender, EventArgs e)
         {
+            int result = DateTime.Compare(dateTime_Start.Value, DateTime.UtcNow);
+
+            if (result==-1)
+            {
+                MessageBox.Show("현재일 기준으로 선택해 주세요");
+                return;
+            }
+            
             dateTime_End.Value = dateTime_Start.Value.AddDays(dayAddParameter);
         }
 
@@ -105,6 +113,13 @@ namespace TourTeamProject
             btn_Pick6.Text = string.Empty;
             btn_Pick7.Text = string.Empty;
             btn_Pick8.Text = string.Empty;
+
+            metroTabPage3.Controls.Clear();
+            btn_ShowSchdual.Enabled = false;
+            btn_Img.Enabled = false;
+            pickNode = 0;
+            dateTime_Start.Enabled = false;
+            
         }
         #endregion
 

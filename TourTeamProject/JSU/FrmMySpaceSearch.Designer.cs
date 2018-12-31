@@ -63,11 +63,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(322, 15);
+            this.label3.Location = new System.Drawing.Point(301, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 12);
+            this.label3.Size = new System.Drawing.Size(50, 12);
             this.label3.TabIndex = 5;
-            this.label3.Text = "거리";
+            this.label3.Text = "거리(M)";
             // 
             // splitContainer1
             // 
